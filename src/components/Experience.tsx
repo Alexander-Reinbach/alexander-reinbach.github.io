@@ -20,7 +20,7 @@ const roles: Role[] = [
     org: "SyncMode",
     location: "Munich · Remote",
     bullets: [
-      "Solo end-to-end build to learn what production-grade agentic AI actually demands.",
+      "Solo end-to-end build to learn what production-grade agentic workflows actually demand.",
       "Architecture, multi-LLM orchestration (Gemini, OpenAI, Anthropic), deterministic guardrails, eval audits, production cloud.",
       "Vertex AI Agent Builder · NotebookLM · ReAct patterns · MCP · Multi-agent runtime.",
     ],

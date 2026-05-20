@@ -58,7 +58,7 @@ export function Hero() {
           variants={fadeInUp}
           className="mt-8 max-w-3xl text-balance text-lg leading-relaxed text-slate-400 sm:text-xl"
         >
-          Applied GenAI Lead at BMW Group. Full-Stack AI Builder.
+          Applied GenAI Lead at BMW Group. Full-Stack AI Builder, still learning.
           <br className="hidden sm:block" />
           Bridging frontier AI vendors and certified enterprise production —{" "}
           <span className="text-slate-200">

@@ -76,21 +76,22 @@ export function RecruiterRadar() {
             </div>
 
             <h2 className="max-w-4xl text-balance text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl">
-              I operate as an{" "}
-              <span className="text-gradient">AI Solution Architect</span> &{" "}
+              The work fits best as{" "}
+              <span className="text-gradient">AI Solution Architect</span> or{" "}
               <span className="text-gradient-emerald">Forward Deployed Engineer</span>{" "}
-              for AI-led hyperscalers.
+              at AI-led hyperscalers.
             </h2>
 
             <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-400">
-              Built for vendor-side delivery:{" "}
+              Vendor-side delivery is where I keep finding the work most
+              interesting:{" "}
               <span className="text-slate-200">
-                enterprise customer fluency, multi-cloud AI breadth, end-to-end
-                ownership from discovery through production deployment.
+                enterprise customers, multi-cloud AI, the messy middle between
+                discovery and production.
               </span>{" "}
-              The kind of engineer who can sit with a CTO at breakfast, a plant
-              operator at lunch, and a 3 a.m. on-call page — and ship something
-              that survives all three.
+              Discovery workshops in the morning, on-call pages at 3 a.m. — both
+              feel like the same question: what&apos;s actually broken, and
+              what&apos;s the smallest fix?
             </p>
           </div>
 

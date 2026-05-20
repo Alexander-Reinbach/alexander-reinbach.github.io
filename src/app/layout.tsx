@@ -17,16 +17,17 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Alex Reinbach — Architecting the Future of Agentic AI",
   description:
-    "GenAI Lead at BMW Group. Full-Stack AI Builder. Turning complex enterprise legacy and multi-agent workflows into high-impact production reality.",
+    "Applied GenAI Lead at BMW Group. Full-Stack AI Builder, still learning. Bridging frontier AI vendors and certified enterprise production — from technical discovery to production deployment, across 8 markets.",
   keywords: [
     "Alex Reinbach",
-    "GenAI",
-    "AI Architect",
+    "Applied GenAI",
+    "AI Solution Architect",
+    "Forward Deployed Engineer",
     "BMW",
     "Multi-Agent Systems",
     "MCP",
-    "Head of AI",
-    "Solutions Architect",
+    "Vertex AI",
+    "Gemini",
     "LLMOps",
     "Enterprise AI",
   ],
@@ -37,14 +38,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "Alex Reinbach — Architecting the Future of Agentic AI",
     description:
-      "GenAI Lead at BMW Group. Founder of SyncMode.io. Building production multi-agent systems at enterprise scale.",
+      "Applied GenAI Lead at BMW Group. Founder of SyncMode. Bridging frontier AI and certified enterprise production — across 8 markets.",
     siteName: "Alex Reinbach",
   },
   twitter: {
     card: "summary_large_image",
     title: "Alex Reinbach — Architecting the Future of Agentic AI",
     description:
-      "GenAI Lead at BMW Group. Full-Stack AI Builder.",
+      "Applied GenAI Lead at BMW Group. Full-Stack AI Builder, still learning.",
   },
   robots: {
     index: true,

@@ -50,9 +50,9 @@ export function About() {
           variants={fadeInUp}
           className="mb-12 text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
         >
-          Most teams ship AI <span className="text-slate-500">demos.</span>
+          AI demos are easy.
           <br />
-          <span className="text-gradient">I ship Applied AI in production.</span>
+          <span className="text-gradient">Production-grade is the longer game — still learning it.</span>
         </motion.h2>
 
         <motion.div
@@ -68,7 +68,8 @@ export function About() {
                 that turns a rapid prototype into a production-grade agentic
                 workflow.
               </span>{" "}
-              That&apos;s the work I do.
+              That&apos;s most of what I&apos;m doing — and still figuring out —
+              these days.
             </p>
             <p>
               By day, I lead Applied GenAI and Simultaneous Engineering at{" "}
@@ -87,23 +88,25 @@ export function About() {
               and behavioral analytics.
             </p>
             <p>
-              My moat is the bridge nobody wants to build:{" "}
+              What I keep finding myself doing is the bridge work between{" "}
               <span className="text-white">
-                frontier AI on one side, certified mass production on the other.
+                frontier AI on one side and certified mass production on the
+                other.
               </span>{" "}
-              I&apos;ve translated R&amp;D prototypes into series production for the
-              BMW 7 Series, iX, and XM — across 8 markets, down the full digital
-              factory stack (ERP → SCADA → PLCs). Then I write the agent that makes
-              that whole stack queryable in natural language.
+              I&apos;ve translated R&amp;D prototypes into series production for
+              the BMW 7 Series, iX, and XM — across 8 markets, down the full
+              digital factory stack (ERP → SCADA → PLCs). Then I write the agent
+              that makes that whole stack queryable in natural language.
             </p>
             <p className="text-slate-400">
               I thrive on &quot;blank-canvas&quot; challenges and building tech that
               survives a Monday-morning prod incident.
             </p>
             <p className="text-slate-400">
-              Equally at home in a customer discovery workshop and a 3 a.m.
-              on-call rotation — the kind of full-stack reach that turns
-              enterprise pilots into production deployments.
+              The work I keep coming back to lives at the seam — a discovery
+              workshop in the morning, an on-call page at 3 a.m. Both feel like
+              the same question: what&apos;s actually broken, and what&apos;s the
+              smallest thing that fixes it?
             </p>
           </div>
 

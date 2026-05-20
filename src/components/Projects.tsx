@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: "SyncMode.io",
     subtitle: "Founder · Sole Developer · GenAI Sandbox",
     description:
-      "My GenAI sandbox — built solo end-to-end to learn what production-grade agentic workflows actually demand. Multi-LLM orchestration (Gemini, OpenAI, Anthropic), deterministic guardrails, evaluation pipelines + observability, server-side tracking, Stripe + DSGVO compliance, Cloudflare-fronted Docker stack on Hetzner. Every layer hand-built, every failure mode logged. The lessons feed directly back into how I architect at scale.",
+      "My GenAI sandbox — built solo end-to-end to learn what production-grade agentic workflows actually demand. Multi-LLM orchestration (Gemini, OpenAI, Anthropic), deterministic guardrails, evaluation pipelines + observability, server-side tracking, Stripe + DSGVO compliance, Cloudflare-fronted Docker stack on Hetzner. Every layer hand-built, every failure mode logged. What I'm still learning here feeds directly back into how I architect at scale.",
     tags: [
       "Python",
       "Next.js",

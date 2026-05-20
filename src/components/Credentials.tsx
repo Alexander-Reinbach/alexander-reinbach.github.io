@@ -79,7 +79,7 @@ const stack: StackEntry[] = [
   { name: "LangChain", family: "ai" },
   { name: "MCP", family: "ai" },
   { name: "Claude Code", family: "ai" },
-  { name: "OpenAI · Anthropic", family: "ai" },
+  { name: "Gemini · OpenAI · Anthropic", family: "ai" },
   { name: "Vertex AI Agent Builder", family: "ai" },
   { name: "NotebookLM", family: "ai" },
   { name: "ReAct · Multi-Agent", family: "ai" },

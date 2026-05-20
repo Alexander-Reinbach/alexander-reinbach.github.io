@@ -62,7 +62,7 @@ export function Hero() {
           <br className="hidden sm:block" />
           Bridging frontier AI vendors and certified enterprise production —{" "}
           <span className="text-slate-200">
-            from discovery to deployment, across 8 markets.
+            from technical discovery to production deployment, across 8 markets.
           </span>
         </motion.p>
 

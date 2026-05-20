@@ -20,19 +20,6 @@ function LinkedinIcon({ className }: { className?: string }) {
   );
 }
 
-function GithubIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.53-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.76.11 3.05.73.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.26 5.69.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.55 4.56-1.53 7.85-5.83 7.85-10.91C23.5 5.65 18.35.5 12 .5z" />
-    </svg>
-  );
-}
-
 export function Contact() {
   const [copied, setCopied] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -77,17 +64,17 @@ export function Contact() {
           variants={fadeInUp}
           className="mb-6 text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl"
         >
-          Let&apos;s build the
+          Let&apos;s ship the
           <br />
-          <span className="text-gradient">next OS together.</span>
+          <span className="text-gradient">next agent together.</span>
         </motion.h2>
 
         <motion.p
           variants={fadeInUp}
           className="mb-16 max-w-2xl text-lg text-slate-400"
         >
-          Hiring a Head of AI, Senior Architect, or founding engineer for an agentic
-          systems play? Drop a line — I reply within 24h.
+          For technical conversations on Applied AI, agentic systems, or
+          vendor-side delivery — the inbox is open.
         </motion.p>
 
         <div className="grid gap-8 md:grid-cols-[1.2fr_1fr]">
@@ -164,16 +151,9 @@ export function Contact() {
             <SocialLink
               icon={<LinkedinIcon className="h-5 w-5" />}
               label="LinkedIn"
-              handle="alexander-reinbach"
-              href="https://www.linkedin.com/in/alexander-reinbach/"
+              handle="Alexander Reinbach"
+              href="https://www.linkedin.com/in/alexander-r-929814144/"
               tone="cyan"
-            />
-            <SocialLink
-              icon={<GithubIcon className="h-5 w-5" />}
-              label="GitHub"
-              handle="@alexreinbach"
-              href="https://github.com/"
-              tone="emerald"
             />
 
             <div className="rounded-2xl glass p-5">
@@ -182,13 +162,6 @@ export function Contact() {
               </div>
               <div className="mt-1 text-sm font-medium text-slate-100">
                 Within 24h · Mon–Fri
-              </div>
-              <div className="mt-3 flex items-center gap-2 text-xs text-emerald-300">
-                <span className="relative inline-flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                </span>
-                Currently accepting intro calls
               </div>
             </div>
           </motion.div>

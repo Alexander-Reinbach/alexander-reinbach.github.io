@@ -63,9 +63,10 @@ export function About() {
             <p>
               The hardest part of enterprise AI isn&apos;t the model.{" "}
               <span className="text-white">
-                It&apos;s the connective tissue — APIs, legacy systems, eval
-                pipelines, stakeholder trust — that turns a prototype into a
-                deployed agent.
+                It&apos;s the connective tissue — APIs, legacy data silos,
+                security perimeters, evaluation pipelines, stakeholder trust —
+                that turns a rapid prototype into a production-grade agentic
+                workflow.
               </span>{" "}
               That&apos;s the work I do.
             </p>

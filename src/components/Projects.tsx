@@ -95,9 +95,10 @@ export function Projects() {
           variants={fadeInUp}
           className="mb-16 max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
         >
-          Systems shipped to <span className="text-gradient-emerald">production.</span>
+          From demo to{" "}
+          <span className="text-gradient-emerald">compliance-ready production.</span>
           <br />
-          <span className="text-slate-500">No demos. No slideware.</span>
+          <span className="text-slate-500">Through every blocker.</span>
         </motion.h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

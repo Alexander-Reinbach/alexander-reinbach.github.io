@@ -22,7 +22,7 @@ const trackRecord = [
   "600+ daily users on a custom MCP server I architected end-to-end",
   "Multi-LLM orchestration in production (Gemini · OpenAI · Anthropic)",
   "Vendor-recognized: Anthropic · Google · DeepLearning.AI certs (2025-2026)",
-  "Founder of a vertical GenAI app — discovery → POC → production, solo",
+  "Founder of a vertical GenAI app: discovery → POC → production, solo",
   "Stakeholder spectrum: C-suite, IT, plant operators, end-users",
   "Languages: DE native · EN fluent · FR conversational",
   "Lived & studied: Munich · Edinburgh · Beijing",
@@ -89,8 +89,8 @@ export function RecruiterRadar() {
                 enterprise customers, multi-cloud AI, the messy middle between
                 discovery and production.
               </span>{" "}
-              Discovery workshops in the morning, on-call pages at 3 a.m. — both
-              feel like the same question: what&apos;s actually broken, and
+              Discovery workshops in the morning, on-call pages at 3 a.m. Both
+              feel like the same question. What&apos;s actually broken, and
               what&apos;s the smallest fix?
             </p>
           </div>

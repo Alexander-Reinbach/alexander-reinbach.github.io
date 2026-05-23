@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alex Reinbach — Portfolio
 
-## Getting Started
+Static personal portfolio / CV site built with Next.js 16 (App Router, TypeScript, Tailwind v4, framer-motion).
 
-First, run the development server:
+## Live versions
+
+- **GitHub Pages** — `https://blackbeautyxsurferboy.github.io/alex-reinbach-cv/` (auto-deployed from `main` via `.github/workflows/deploy-pages.yml`)
+- **syncmode.io/AlexanderReinbach** — alternative deploy via nginx static export (see `DEPLOY.md`)
+
+Both deployments build from the same `out/` static export and only differ in `NEXT_PUBLIC_BASE_PATH`.
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Production build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Root-path build (custom domain / local preview)
+npm run build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Subpath build (e.g. GitHub Pages or syncmode.io/AlexanderReinbach)
+NEXT_PUBLIC_BASE_PATH=/alex-reinbach-cv npm run build
+```
 
-## Learn More
+Output lands in `out/` — fully self-contained, no Node runtime needed at the host.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **GitHub Pages**: push to `main` → the Actions workflow rebuilds and publishes. `NEXT_PUBLIC_BASE_PATH` is set automatically from the repo name via `actions/configure-pages`.
+- **syncmode.io**: manual `rsync` + bind-mount, see [DEPLOY.md](./DEPLOY.md).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Stack
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 (Turbopack), React 19, TypeScript 5
+- Tailwind CSS v4
+- framer-motion 12
+- lucide-react icons

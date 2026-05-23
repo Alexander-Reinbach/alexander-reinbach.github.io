@@ -74,7 +74,7 @@ export function Contact() {
           className="mb-16 max-w-2xl text-lg text-slate-400"
         >
           For technical conversations on Applied AI, agentic systems, or
-          vendor-side delivery — the inbox is open.
+          vendor-side delivery. The inbox is open.
         </motion.p>
 
         <div className="grid gap-8 md:grid-cols-[1.2fr_1fr]">

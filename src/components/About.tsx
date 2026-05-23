@@ -52,7 +52,7 @@ export function About() {
         >
           AI demos are easy.
           <br />
-          <span className="text-gradient">Production-grade is the longer game — still learning it.</span>
+          <span className="text-gradient">Production-grade is the longer game.</span>
         </motion.h2>
 
         <motion.div
@@ -63,27 +63,26 @@ export function About() {
             <p>
               The hardest part of enterprise AI isn&apos;t the model.{" "}
               <span className="text-white">
-                It&apos;s the connective tissue — APIs, legacy data silos,
-                security perimeters, evaluation pipelines, stakeholder trust —
-                that turns a rapid prototype into a production-grade agentic
-                workflow.
+                It&apos;s the connective tissue: APIs, legacy data silos,
+                security perimeters, evaluation pipelines, stakeholder trust.
+                That&apos;s what turns a rapid prototype into a production-grade
+                agentic workflow.
               </span>{" "}
-              That&apos;s most of what I&apos;m doing — and still figuring out —
-              these days.
+              Most of what I do these days, and still figure out as I go.
             </p>
             <p>
               By day, I lead Applied GenAI and Simultaneous Engineering at{" "}
-              <span className="text-violet-300">BMW Group</span>, bridging the gap
-              between high-level executive strategy and raw engineering. Earlier
+              <span className="text-violet-300">BMW Group</span>, where the work
+              sits between executive strategy and raw engineering. Earlier
               chapters took me through{" "}
               <span className="text-amber-300">Amazon</span> (where Customer
               Obsession became muscle memory) and academic stops in{" "}
               <span className="text-emerald-300">
                 Munich, Edinburgh, and Beijing
-              </span>{" "}
-              — the kind of route that teaches you to read a room in three
-              languages before you optimize it. By night, I ship code in
-              production independently, pushing the boundaries of{" "}
+              </span>
+              . That route teaches you to read a room in three languages before
+              you optimize it. By night, I ship code in production
+              independently. Mostly{" "}
               <span className="text-cyan-300">autonomous multi-agent systems</span>{" "}
               and behavioral analytics.
             </p>
@@ -94,7 +93,7 @@ export function About() {
                 other.
               </span>{" "}
               I&apos;ve translated R&amp;D prototypes into series production for
-              the BMW 7 Series, iX, and XM — across 8 markets, down the full
+              the BMW 7 Series, iX, and XM, across 8 markets, down the full
               digital factory stack (ERP → SCADA → PLCs). Then I write the agent
               that makes that whole stack queryable in natural language.
             </p>
@@ -103,9 +102,9 @@ export function About() {
               survives a Monday-morning prod incident.
             </p>
             <p className="text-slate-400">
-              The work I keep coming back to lives at the seam — a discovery
+              The work I keep coming back to lives at the seam: a discovery
               workshop in the morning, an on-call page at 3 a.m. Both feel like
-              the same question: what&apos;s actually broken, and what&apos;s the
+              the same question. What&apos;s actually broken, and what&apos;s the
               smallest thing that fixes it?
             </p>
           </div>

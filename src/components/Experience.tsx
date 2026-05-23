@@ -33,10 +33,10 @@ const roles: Role[] = [
     org: "BMW Group",
     location: "Munich, Germany",
     bullets: [
-      "Lead a 6-engineer team owning Simultaneous Engineering across BEV & ICE platforms (7 Series, iX, XM) — bridging R&D prototypes into certified global mass production.",
+      "Lead a 6-engineer team owning Simultaneous Engineering across BEV & ICE platforms (7 Series, iX, XM), translating R&D prototypes into certified global mass production.",
       "Drive the Applied GenAI initiative in parallel: embedding LLM agents and MCP-based data access into operational workflows.",
       "Own the full digital factory stack: ERP → SCADA → PLCs across multiple plants.",
-      "Built a custom MCP server (M2M + OAuth) inside the corporate environment — 600+ daily users, executive sponsorship secured.",
+      "Built a custom MCP server (M2M + OAuth) inside the corporate environment. 600+ daily users, executive sponsorship secured.",
       "Trusted advisor to executives bridging business, IT, and innovation.",
     ],
     tone: "violet",
@@ -48,8 +48,8 @@ const roles: Role[] = [
     org: "BMW Group",
     location: "Munich, Germany",
     bullets: [
-      "Led the Product Master Data team within the iPDM Group — strategic ownership of data governance across vehicle development and IT.",
-      "Directed global software deployments across 8 markets — 35% faster integration cycles, zero critical failures.",
+      "Led the Product Master Data team within the iPDM Group, with strategic ownership of data governance across vehicle development and IT.",
+      "Directed global software deployments across 8 markets. 35% faster integration cycles, zero critical failures.",
       "Designed end-to-end application architectures aligning technology strategy with business objectives.",
     ],
     tone: "violet",
@@ -71,7 +71,7 @@ const roles: Role[] = [
     org: "BMW Group",
     location: "Munich, Germany",
     bullets: [
-      "\"Act like a Start-Up. Deliver like a Grown-Up.\" — internal accelerator program for selected intrapreneurs.",
+      "\"Act like a Start-Up. Deliver like a Grown-Up.\" Internal accelerator program for selected intrapreneurs.",
       "Pitched and prototyped a venture concept end-to-end, from problem framing to executive review.",
     ],
     tone: "amber",
@@ -82,7 +82,7 @@ const roles: Role[] = [
     org: "BMW Group",
     location: "Munich, Germany",
     bullets: [
-      "Thesis: \"Flexibilisation of the product supply management\" — focus on data governance & system integration.",
+      "Thesis: \"Flexibilisation of the product supply management\", with focus on data governance & system integration.",
       "Grade 1.0; influenced downstream automotive data strategies.",
     ],
     tone: "slate",
@@ -104,7 +104,7 @@ const roles: Role[] = [
     org: "Amazon",
     location: "Munich, Germany",
     bullets: [
-      "New Accounts Management team — onboarded new Sellers onto the European marketplace.",
+      "New Accounts Management team. Onboarded new Sellers onto the European marketplace.",
       "Data-driven optimization of seller pipelines; embraced Customer Obsession from Day 1.",
     ],
     tone: "amber",

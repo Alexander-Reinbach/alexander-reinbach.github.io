@@ -22,7 +22,7 @@ const projects: Project[] = [
     title: "BMW Group GenAI Infrastructure",
     subtitle: "Custom MCP Server · Enterprise Scale",
     description:
-      "Architected the connective tissue between frontier AI and the BMW production stack: a custom Model Context Protocol (MCP) server bridging APIs, legacy data silos, and security perimeters via M2M and OAuth. Scaled to 600+ daily active users — measurable ROI, executive sponsorship secured.",
+      "Architected the connective tissue between frontier AI and the BMW production stack: a custom Model Context Protocol (MCP) server connecting APIs, legacy data silos, and security perimeters via M2M and OAuth. Scaled to 600+ daily active users, with measurable ROI and executive sponsorship secured.",
     tags: ["Python", "MCP", "OAuth", "Enterprise RAG", "LLM Orchestration"],
     metrics: [
       { label: "Daily Users", value: "600+" },
@@ -36,7 +36,7 @@ const projects: Project[] = [
     title: "SyncMode.io",
     subtitle: "Founder · Sole Developer · GenAI Sandbox",
     description:
-      "My GenAI sandbox — built solo end-to-end to learn what production-grade agentic workflows actually demand. Multi-LLM orchestration (Gemini, OpenAI, Anthropic), deterministic guardrails, evaluation pipelines + observability, server-side tracking, Stripe + DSGVO compliance, Cloudflare-fronted Docker stack on Hetzner. Every layer hand-built, every failure mode logged. What I'm still learning here feeds directly back into how I architect at scale.",
+      "My GenAI sandbox, built solo end-to-end to learn what production-grade agentic workflows actually demand. Multi-LLM orchestration (Gemini, OpenAI, Anthropic), deterministic guardrails, evaluation pipelines + observability, server-side tracking, Stripe + DSGVO compliance, Cloudflare-fronted Docker stack on Hetzner. Every layer hand-built, every failure mode logged. What I learn here feeds back into how I architect at scale.",
     tags: [
       "Python",
       "Next.js",
@@ -57,7 +57,7 @@ const projects: Project[] = [
     title: "Flagship Industrialization",
     subtitle: "BMW 7 Series · iX · XM — R&D → Series Production",
     description:
-      "Leading a team of 6 engineers translating bleeding-edge R&D prototypes into certified global mass production. Owning the full digital factory stack — ERP, SCADA, PLCs — across 8 international markets. Drove deployment cycles 35% faster with zero critical failures and pitched solutions to skeptical plant managers across three European plants.",
+      "Leading a team of 6 engineers translating bleeding-edge R&D prototypes into certified global mass production. Owning the full digital factory stack (ERP, SCADA, PLCs) across 8 international markets. Drove deployment cycles 35% faster with zero critical failures and pitched solutions to skeptical plant managers across three European plants.",
     tags: [
       "Industrialization",
       "Homologation",

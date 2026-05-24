@@ -45,25 +45,30 @@ export function Hero() {
 
         <motion.h1
           variants={fadeInUp}
-          className="text-balance text-5xl font-bold leading-[1.15] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl pb-4"
+          className="text-balance leading-[1.15] tracking-tight pb-4"
         >
-          <span className="block text-slate-100">Architecting</span>
-          <span className="block text-slate-100">
-            the <span className="text-gradient">Future of</span>
+          <span className="mb-3 block text-3xl font-medium text-slate-300 sm:text-4xl md:mb-4 md:text-5xl">
+            Hi, I&apos;m Alex.
           </span>
-          <span className="block text-gradient pb-3">Agentic AI.</span>
+          <span className="block text-5xl font-bold text-slate-100 sm:text-6xl md:text-7xl lg:text-8xl">
+            Shipping Applied AI
+          </span>
+          <span className="block pb-3 text-5xl font-bold text-gradient sm:text-6xl md:text-7xl lg:text-8xl">
+            where the data lives.
+          </span>
         </motion.h1>
 
         <motion.p
           variants={fadeInUp}
           className="mt-8 max-w-3xl text-balance text-lg leading-relaxed text-slate-400 sm:text-xl"
         >
-          Applied GenAI Lead at BMW Group. Full-Stack AI Builder.
+          Applied GenAI Lead at BMW Group. Founder of SyncMode.
           <br className="hidden sm:block" />
-          The bridge between frontier AI vendors and certified enterprise production.{" "}
+          Agents, MCP servers and RAG inside Fortune-500 enterprise constraints &mdash; from discovery to deployment, across{" "}
           <span className="text-slate-200">
-            From technical discovery to production deployment, across 8 markets.
-          </span>
+            8 markets and 600+ engineers.
+          </span>{" "}
+          Curious enough to learn something new every release.
         </motion.p>
 
         <motion.div

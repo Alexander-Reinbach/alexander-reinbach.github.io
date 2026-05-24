@@ -68,7 +68,8 @@ export function About() {
                 That&apos;s what turns a rapid prototype into a production-grade
                 agentic workflow.
               </span>{" "}
-              Most of what I do these days, and still figure out as I go.
+              That&apos;s most of what I do these days &mdash; and most of what
+              I&apos;m still figuring out, release after release.
             </p>
             <p>
               By day, I lead Applied GenAI and Simultaneous Engineering at{" "}
@@ -89,8 +90,8 @@ export function About() {
             <p>
               What I keep finding myself doing is the bridge work between{" "}
               <span className="text-white">
-                frontier AI on one side and certified mass production on the
-                other.
+                frontier models on one side and the data, processes and people
+                on the other.
               </span>{" "}
               I&apos;ve translated R&amp;D prototypes into series production for
               the BMW 7 Series, iX, and XM, across 8 markets, down the full

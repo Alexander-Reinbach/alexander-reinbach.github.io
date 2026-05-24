@@ -45,17 +45,10 @@ export function Hero() {
 
         <motion.h1
           variants={fadeInUp}
-          className="text-balance leading-[1.15] tracking-tight pb-4"
+          className="text-balance text-5xl font-bold leading-[1.15] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl pb-4"
         >
-          <span className="mb-3 block text-3xl font-medium text-slate-300 sm:text-4xl md:mb-4 md:text-5xl">
-            Hi, I&apos;m Alex.
-          </span>
-          <span className="block text-5xl font-bold text-slate-100 sm:text-6xl md:text-7xl lg:text-8xl">
-            Shipping Applied AI
-          </span>
-          <span className="block pb-3 text-5xl font-bold text-gradient sm:text-6xl md:text-7xl lg:text-8xl">
-            where the data lives.
-          </span>
+          <span className="block text-slate-100">Shipping Applied AI</span>
+          <span className="block text-gradient pb-3">where the data lives.</span>
         </motion.h1>
 
         <motion.p

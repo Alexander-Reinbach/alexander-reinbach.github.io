@@ -4,7 +4,7 @@ Static personal portfolio / CV site built with Next.js 16 (App Router, TypeScrip
 
 ## Live versions
 
-- **GitHub Pages** — `https://blackbeautyxsurferboy.github.io/alex-reinbach-cv/` (auto-deployed from `main` via `.github/workflows/deploy-pages.yml`)
+- **GitHub Pages** — `https://alexander-reinbach.github.io/` (auto-deployed from `main` via `.github/workflows/deploy-pages.yml`)
 - **syncmode.io/AlexanderReinbach** — alternative deploy via nginx static export (see `DEPLOY.md`)
 
 Both deployments build from the same `out/` static export and only differ in `NEXT_PUBLIC_BASE_PATH`.
@@ -23,8 +23,8 @@ npm run dev
 # Root-path build (custom domain / local preview)
 npm run build
 
-# Subpath build (e.g. GitHub Pages or syncmode.io/AlexanderReinbach)
-NEXT_PUBLIC_BASE_PATH=/alex-reinbach-cv npm run build
+# Subpath build (e.g. syncmode.io/AlexanderReinbach)
+NEXT_PUBLIC_BASE_PATH=/AlexanderReinbach npm run build
 ```
 
 Output lands in `out/` — fully self-contained, no Node runtime needed at the host.

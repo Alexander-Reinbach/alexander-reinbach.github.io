@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Firecrawl scrape outputs (JD research scratch — not source)
 /.firecrawl/
+
+# Bewerbungsunterlagen — privat, NICHT ins öffentliche github.io-Repo
+/applications/

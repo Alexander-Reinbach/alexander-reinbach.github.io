@@ -15,10 +15,10 @@ export function About() {
         className="mx-auto max-w-5xl"
       >
         <motion.div variants={fadeInUp} className="mb-12 flex items-center gap-4">
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-violet-300">
-            01 — The Expedition
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-300">
+            01 · About
           </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-violet-500/40 to-transparent" />
+          <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/40 to-transparent" />
         </motion.div>
 
         <motion.div
@@ -26,7 +26,7 @@ export function About() {
           className="mb-10 flex items-center gap-5"
         >
           <div className="relative shrink-0">
-            <div className="absolute -inset-0.5 rounded-full bg-gradient-to-br from-violet-500/40 via-cyan-500/30 to-emerald-500/30 blur-sm" />
+            <div className="absolute -inset-0.5 rounded-full bg-gradient-to-br from-cyan-500/40 via-sky-500/30 to-emerald-500/30 blur-sm" />
             <img
               src={withBase("/alex.jpg")}
               alt="Alex Reinbach"
@@ -35,13 +35,13 @@ export function About() {
           </div>
           <div className="leading-tight">
             <div className="text-base font-semibold text-slate-100 sm:text-lg">
-              Alex Reinbach
+              Alexander Reinbach
             </div>
             <div className="mt-1 text-sm text-slate-400">
-              Applied GenAI Lead · BMW Group · Founder · SyncMode
+              Engineering Team Lead &amp; Applied GenAI Lead, BMW Group · Founder, SyncMode.io
             </div>
             <div className="mt-0.5 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">
-              Munich · Edinburgh · Beijing
+              Munich · German native · English C1
             </div>
           </div>
         </motion.div>
@@ -50,9 +50,9 @@ export function About() {
           variants={fadeInUp}
           className="mb-12 text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
         >
-          AI demos are easy.
+          New technology gets stuck
           <br />
-          <span className="text-gradient">Production-grade is the longer game.</span>
+          <span className="text-gradient-emerald">on access and approval.</span>
         </motion.h2>
 
         <motion.div
@@ -61,75 +61,54 @@ export function About() {
         >
           <div className="space-y-6 text-lg leading-relaxed text-slate-300">
             <p>
-              The hardest part of enterprise AI isn&apos;t the model.{" "}
-              <span className="text-white">
-                It&apos;s the connective tissue: APIs, legacy data silos,
-                security perimeters, evaluation pipelines, stakeholder trust.
-                That&apos;s what turns a rapid prototype into a production-grade
-                agentic workflow.
-              </span>{" "}
-              That&apos;s most of what I do these days &mdash; and most of what
-              I&apos;m still figuring out, release after release.
+              At BMW I spend half my time leading a team of six engineers who develop
+              the tyres for the 7 Series, iX and XM, together with purchasing, the
+              plant, sales and quality. In the other half I lead GenAI adoption for my
+              area. I train engineers on working with models, choose models on measured
+              data, and present rollout, model choice and token spend up to executive
+              level.
             </p>
             <p>
-              By day, I lead Applied GenAI and Simultaneous Engineering at{" "}
-              <span className="text-violet-300">BMW Group</span>, where the work
-              sits between executive strategy and raw engineering. Earlier
-              chapters took me through{" "}
-              <span className="text-amber-300">Amazon</span> (where Customer
-              Obsession became muscle memory) and academic stops in{" "}
-              <span className="text-emerald-300">
-                Munich, Edinburgh, and Beijing
-              </span>
-              . That route teaches you to read a room in three languages before
-              you optimize it. By night, I ship code in production
-              independently. Mostly{" "}
-              <span className="text-cyan-300">autonomous multi-agent systems</span>{" "}
-              and behavioral analytics.
+              The best-known result is an internal AI agent. It reaches nine legacy
+              engineering systems through a custom MCP server behind an OAuth and
+              Apigee gateway, and it has{" "}
+              <span className="text-white">its own role in the permission system</span>.
+              That role is what let security, compliance and the works council say
+              yes. About 500 engineers use it every week.
             </p>
             <p>
-              What I keep finding myself doing is the bridge work between{" "}
-              <span className="text-white">
-                frontier models on one side and the data, processes and people
-                on the other.
-              </span>{" "}
-              I&apos;ve translated R&amp;D prototypes into series production for
-              the BMW 7 Series, iX, and XM, across 8 markets, down the full
-              digital factory stack (ERP → SCADA → PLCs). Then I write the agent
-              that makes that whole stack queryable in natural language.
+              Before that I spent four and a half years in product master data and
+              led a platform rollout into eight markets. I started in strategy work at
+              Amazon and Simon-Kucher in 2017.
             </p>
-            <p className="text-slate-400">
-              I thrive on &quot;blank-canvas&quot; challenges and building tech that
-              survives a Monday-morning prod incident.
-            </p>
-            <p className="text-slate-400">
-              The work I keep coming back to lives at the seam: a discovery
-              workshop in the morning, an on-call page at 3 a.m. Both feel like
-              the same question. What&apos;s actually broken, and what&apos;s the
-              smallest thing that fixes it?
+            <p>
+              In February 2026 I founded{" "}
+              <span className="text-emerald-300">SyncMode.io</span>, a relationship
+              profile for couples. I built it by directing coding agents, and I sell it
+              myself. The first paying customers came in August.
             </p>
           </div>
 
           <div className="space-y-4">
             <PrincipleCard
               index="01"
-              title="Production over prototype"
-              body="Demos die in PowerPoint. I ship what survives a Monday-morning prod incident."
+              title="Measure instead of estimate"
+              body="Models go through the same test for accuracy and cost. Adoption means weekly active users, not sign-ups."
             />
             <PrincipleCard
               index="02"
-              title="Strategy meets stack-trace"
-              body="C-suite alignment and OAuth flows belong in the same conversation."
+              title="Approval is part of the design"
+              body="Whether people can see what a system does decides whether it goes live."
             />
             <PrincipleCard
               index="03"
-              title="Eliminate, don't optimize"
-              body="The fastest pipeline is the one that doesn't need to run."
+              title="One plan, many audiences"
+              body="I explain the same plan to engineers, a works council and executives, each at their own depth."
             />
             <PrincipleCard
               index="04"
-              title="From SCADA to LLM"
-              body="The same calm rigor that ships a homologated vehicle also ships an agent."
+              title="Numbers with their method"
+              body="About 70 % less time to an answer on complex questions, measured with five engineers. I always say how."
             />
           </div>
         </motion.div>
@@ -153,14 +132,14 @@ function PrincipleCard({
       className="group relative rounded-2xl glass p-5 transition-colors hover:bg-white/[0.04]"
     >
       <div className="flex items-start gap-4">
-        <span className="font-mono text-xs text-violet-300/80">{index}</span>
+        <span className="font-mono text-xs text-cyan-300/80">{index}</span>
         <div className="flex-1">
           <h3 className="mb-1 text-sm font-semibold text-slate-100">{title}</h3>
           <p className="text-sm leading-relaxed text-slate-400">{body}</p>
         </div>
       </div>
       <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity group-hover:opacity-100">
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-violet-500/10 via-transparent to-cyan-500/10" />
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-transparent to-emerald-500/10" />
       </div>
     </motion.div>
   );

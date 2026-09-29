@@ -43,10 +43,14 @@ rsync -a --delete out/ deploy@159.69.39.142:~/projects/survey-system/portfolio-s
 
 ## Site-Struktur (`src/components/`)
 
-- `Hero.tsx` — full-screen mit Scroll-Dissolve (opacity + scale + blur via useTransform), Counter-Stats (useInView + animate), 1 CTA „Get in Touch" (CV-Download bewusst entfernt)
-- `About.tsx` — Foto + Story mit Applied-AI/FDE-Framing („connective tissue", „eval pipelines", „pilots into production")
-- `Projects.tsx` — 3 Cards: BMW MCP Server, SyncMode GenAI-Sandbox, Industrialization
-- `Experience.tsx` — 8 Einträge: SyncMode → BMW (4×) → Simon-Kucher → Amazon (alles ≥ 2017, kein intuMIND)
+**Neutral-Umbau 29.09.2026:** Startseite passt jetzt für FDE- und BizOps-Bewerbungen (BMW + GenAI-Einführung + Gründer), Farbton "calm" (cyan/emerald statt violett). Alle Overclaims entfernt (600+ Daily Users, RAG, LangChain, Vector DBs, ERP/SCADA/PLC, Vertex AI, GCP, "by night I ship code"). Wahrheitsquelle: `../context/canonical-facts.md`.
+
+- `Hero.tsx` — full-screen mit Scroll-Dissolve, Counter-Stats (500 Weekly Users · 8 Märkte · 8 Jahre BMW), 1 CTA „Get in touch"
+- `About.tsx` — Foto + Story: 50/50-Rolle BMW, Agent mit eigener Rolle im Rechtesystem, PDM, SyncMode; 4 Prinzip-Karten
+- `Projects.tsx` — 3 Cards: BMW GenAI Agent, SyncMode.io, One platform eight markets
+- `Experience.tsx` — 8 Einträge nach canonical-facts (BMW-Titel "Vehicle Dynamics", SyncMode ab 02/2026, Thesis 10/2017–06/2018)
+- `WaymoLanding.tsx` + `app/waymo/` — unlisted Bewerbungsseite Strategy & BizOps Lead Germany (noindex, eigene OG-Tags)
+- `AmbientBackground` / `ScrollProgress` nehmen `tone="calm"`; Quantum nutzt weiter den violetten Default
 - `Credentials.tsx` — 4 Top-Cards: Anthropic Claude Code, Google GenAI Leader, DeepLearning.AI, Stanford ML; Education (TUM/Beijing/Karlsruhe/Edinburgh); Tech Cloud
 - `Contact.tsx`
 - `AmbientBackground.tsx` — fixed Gradient-Blobs mit Parallax-Drift
@@ -58,20 +62,15 @@ rsync -a --delete out/ deploy@159.69.39.142:~/projects/survey-system/portfolio-s
 
 - **Implizites Targeting > explizites**: Site darf NICHT sagen „Currently targeting X roles". Stattdessen Vokabular nutzen, das 1:1 aus den Zielrollen-Job-Descriptions kommt: „connective tissue", „discovery to deployment", „eval pipelines", „pilots into production", „on-call rotation", „customer discovery". Recruiter erkennen das Vokabular sofort.
 - **Kein Overclaim** unbekannter Vendor-Skills. Salesforce/Databricks/MongoDB tauchen in Job-Targeting-Sprache auf (siehe RecruiterRadar dead code), aber nie als „I know this" im Tech-Stack. Authentisch > optimiert.
-- **„Applied AI" statt „AI as OS"** — das frühere OS-Framing („I see AI as the operating system") wurde rausgenommen, weil's für FDE/Applied-AI-Architect zu visionär klingt. Aktueller About-h2: „Most teams ship AI demos. I ship Applied AI in production."
+- **„Applied AI" statt „AI as OS"** — das frühere OS-Framing („I see AI as the operating system") wurde rausgenommen, weil's für FDE/Applied-AI-Architect zu visionär klingt. Aktueller About-h2 (29.09.2026): „New technology gets stuck on access and approval."
 - **LinkedIn ist ground truth** für Stationen, Daten, Titel. CV kann veraltete Daten haben (siehe CV-Audit). Wenn LinkedIn und CV auseinandergehen, bleibt LinkedIn-Stand auf der Site.
 - **Lebenslauf-Cut bei Amazon (04/2017)**: alles vor Amazon raus (intuMIND als Freelancer 2015-2016 z. B.). Amazon bleibt drin, weil als kurze Strategie-Station relevant.
 - **Foto**: `public/alex.jpg`, ursprünglich aus dem SyncMode-Frontend kopiert (`gruender-alex.jpg`). About-Section bindet via `withBase("/alex.jpg")` ein.
 - **Descender-Fix** bei `text-gradient` Spans: `background-clip: text` clippt g/p/q/y. Lösung: ausreichend `leading-[1.15]` + `pb-4` aufs h1 + `pb-3` auf den letzten Block-Span. Sonst wird der g-Bauch von „Agentic" abgeschnitten.
 
-## Bekannte CV ↔ Website-Inkonsistenzen (zu klären)
+## CV ↔ Website
 
-- Beijing-Studium: CV sagt „M.Sc. Management & Technology, MBA Program", Site sagt „M.Sc. Industrial Engineering" (laut LinkedIn-Screenshot)
-- Master's Thesis Datum: CV 10/2017–06/2018, Site 09/2017–04/2018
-- BMW current Titel: CV „Team & GenAI Lead", Site „Teamlead Simultaneous Engineering (BEV & ICE) & Applied GenAI Lead"
-- BMW Mittelphase: CV ein Eintrag „Project Lead", Site 3 (Specialist + Intrapreneur + Team PO)
-
-Wenn der User klärt, welcher Stand offiziell ist, Site daran angleichen.
+Seit 29.09.2026 an `../context/canonical-facts.md` angeglichen (Titel, Daten, Zahlen). Offen: `QuantumLanding.tsx` enthält noch alte Overclaims (600+ Nutzer, Enterprise RAG, Homologation, ERP/SCADA/PLC) — Seite ist unlisted, vor erneuter Nutzung bereinigen.
 
 ## Bewusste UI-Entscheidungen
 

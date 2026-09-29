@@ -7,9 +7,9 @@ import { fadeInUp, staggerContainer } from "@/lib/motion";
 const credentials = [
   {
     icon: <BrainCircuit className="h-6 w-6" />,
-    title: "Anthropic · Claude Code 101",
-    subtitle: "Certified May 2026 · Agentic dev workflows",
-    accent: "violet",
+    title: "Anthropic · Claude Code 101 and Building effective human-agent teams",
+    subtitle: "May 2026 and Sep 2026",
+    accent: "sky",
   },
   {
     icon: <Cloud className="h-6 w-6" />,
@@ -27,28 +27,28 @@ const credentials = [
     icon: <Cpu className="h-6 w-6" />,
     title: "Stanford · Machine Learning",
     subtitle: "Andrew Ng · Certified Feb 2020",
-    accent: "rose",
+    accent: "slate",
   },
 ];
 
 const education = [
   {
-    year: "2015 — 2018",
+    year: "2015–2018",
     title: "M.Sc. Management & Technology",
     school: "Technical University of Munich (TUM)",
     detail: "Product Engineering · Strategy & Leadership · Thesis 1.0 · M.Sc. 1.7 (Top 30%)",
   },
   {
-    year: "2016 — 2017",
+    year: "2016–2017",
     title: "Semester Abroad · M.Sc. Industrial Engineering",
     school: "Beijing Institute of Technology (北京理工大学)",
-    detail: "International perspective on engineering & operations",
+    detail: "Exchange year",
   },
   {
-    year: "2010 — 2015",
-    title: "B.Sc. Business Engineering",
-    school: "University of Applied Sciences Karlsruhe",
-    detail: "Wirtschaftsingenieur · Purchasing & Sales",
+    year: "2010–2015",
+    title: "B.Sc. Industrial Engineering",
+    school: "Karlsruhe University of Applied Sciences",
+    detail: "Focus on purchasing and sales",
   },
   {
     year: "2013",
@@ -63,61 +63,50 @@ const otherPrograms = [
   "Munich School of Philosophy · Summer Academy Leadership & Personality",
   "Karl Schlecht Foundation · Schloss Elmau Leadership Academy",
   "FranklinCovey · The 7 Habits of Highly Effective People",
-  "THINK.MAKE.START. @BMW · Design Thinking",
-  "BMW Accelerator · Intrapreneur Program (\"Act like a Start-Up\")",
   "Bridge for Billions · Business Mentor",
 ];
 
 type StackEntry = { name: string; family: string };
 
 const stack: StackEntry[] = [
-  { name: "Python", family: "core" },
-  { name: "TypeScript", family: "core" },
-  { name: "Next.js", family: "frontend" },
-  { name: "Tailwind CSS", family: "frontend" },
-  { name: "FastAPI", family: "backend" },
-  { name: "LangChain", family: "ai" },
   { name: "MCP", family: "ai" },
-  { name: "Claude Code", family: "ai" },
-  { name: "Gemini · OpenAI · Anthropic", family: "ai" },
-  { name: "Vertex AI Agent Builder", family: "ai" },
-  { name: "NotebookLM", family: "ai" },
-  { name: "ReAct · Multi-Agent", family: "ai" },
-  { name: "Enterprise RAG", family: "ai" },
-  { name: "Evals & Observability", family: "ai" },
-  { name: "GCP", family: "cloud" },
-  { name: "Docker", family: "cloud" },
-  { name: "LLMOps", family: "cloud" },
-  { name: "n8n Automation", family: "cloud" },
-  { name: "OAuth · M2M", family: "security" },
-  { name: "SAIF Framework", family: "security" },
-  { name: "Vector DBs", family: "data" },
-  { name: "ERP · SCADA · PLC", family: "industry" },
-  { name: "PLM · Homologation", family: "industry" },
+  { name: "GPT · Gemini · Claude", family: "ai" },
+  { name: "Model evaluation", family: "ai" },
+  { name: "Output guardrails", family: "ai" },
+  { name: "Claude Code · Codex", family: "agents" },
+  { name: "GitHub Copilot", family: "agents" },
+  { name: "TypeScript", family: "build" },
+  { name: "Python", family: "build" },
+  { name: "FastAPI", family: "build" },
+  { name: "Postgres · Redis", family: "build" },
+  { name: "Docker Compose", family: "build" },
+  { name: "Next.js · Tailwind", family: "build" },
+  { name: "OAuth · M2M · Apigee", family: "access" },
+  { name: "Cloudflare", family: "access" },
+  { name: "Stripe", family: "business" },
+  { name: "Excel · Power Query", family: "business" },
+  { name: "PowerApps", family: "business" },
 ];
 
 const familyColor: Record<string, string> = {
-  core: "ring-violet-500/30 text-violet-200 bg-violet-500/10",
-  frontend: "ring-cyan-500/30 text-cyan-200 bg-cyan-500/10",
-  backend: "ring-indigo-500/30 text-indigo-200 bg-indigo-500/10",
-  ai: "ring-fuchsia-500/30 text-fuchsia-200 bg-fuchsia-500/10",
-  cloud: "ring-emerald-500/30 text-emerald-200 bg-emerald-500/10",
-  security: "ring-amber-500/30 text-amber-200 bg-amber-500/10",
-  data: "ring-rose-500/30 text-rose-200 bg-rose-500/10",
-  industry: "ring-orange-500/30 text-orange-200 bg-orange-500/10",
+  ai: "ring-cyan-500/30 text-cyan-200 bg-cyan-500/10",
+  agents: "ring-sky-500/30 text-sky-200 bg-sky-500/10",
+  build: "ring-slate-400/30 text-slate-200 bg-slate-400/10",
+  access: "ring-emerald-500/30 text-emerald-200 bg-emerald-500/10",
+  business: "ring-teal-500/30 text-teal-200 bg-teal-500/10",
 };
 
 const accentColor: Record<string, string> = {
-  violet: "from-violet-500/40 to-indigo-500/20 text-violet-200",
+  sky: "from-sky-500/40 to-indigo-500/20 text-sky-200",
   cyan: "from-cyan-500/40 to-blue-500/20 text-cyan-200",
   emerald: "from-emerald-500/40 to-teal-500/20 text-emerald-200",
-  rose: "from-rose-500/40 to-pink-500/20 text-rose-200",
+  slate: "from-slate-400/40 to-slate-600/20 text-slate-200",
 };
 
 const languages = [
   { code: "DE", label: "German", level: "Native" },
-  { code: "EN", label: "English", level: "Fluent" },
-  { code: "FR", label: "French", level: "Conversational" },
+  { code: "EN", label: "English", level: "C1" },
+  { code: "FR", label: "French", level: "A2" },
 ];
 
 export function Credentials() {
@@ -132,7 +121,7 @@ export function Credentials() {
       >
         <motion.div variants={fadeInUp} className="mb-12 flex items-center gap-4">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-emerald-300">
-            04 — The Proof
+            04 · Education and tools
           </span>
           <div className="h-px flex-1 bg-gradient-to-r from-emerald-500/40 to-transparent" />
         </motion.div>
@@ -141,9 +130,8 @@ export function Credentials() {
           variants={fadeInUp}
           className="mb-16 max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
         >
-          Credentials that <span className="text-gradient">compile.</span>
-          <br />
-          <span className="text-slate-500">Tools that ship.</span>
+          What I learned,{" "}
+          <span className="text-gradient-emerald">and what I work with.</span>
         </motion.h2>
 
         <div className="mb-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -171,7 +159,7 @@ export function Credentials() {
         <motion.div variants={fadeInUp} className="mb-16 grid gap-8 lg:grid-cols-[1.3fr_1fr]">
           <div className="rounded-2xl glass-strong p-7">
             <div className="mb-5 flex items-center gap-3">
-              <GraduationCap className="h-5 w-5 text-violet-300" />
+              <GraduationCap className="h-5 w-5 text-cyan-300" />
               <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-slate-300">
                 Education
               </h3>
@@ -185,8 +173,8 @@ export function Credentials() {
                   <div className="font-mono text-xs text-slate-500">{e.year}</div>
                   <div>
                     <div className="text-sm font-semibold text-slate-100">{e.title}</div>
-                    <div className="text-sm text-violet-300">{e.school}</div>
-                    <div className="mt-0.5 text-xs text-slate-500">{e.detail}</div>
+                    <div className="text-sm text-cyan-300">{e.school}</div>
+                    <div className="mt-0.5 text-xs text-slate-400">{e.detail}</div>
                   </div>
                 </li>
               ))}
@@ -242,10 +230,10 @@ export function Credentials() {
           <div className="mb-6 flex items-end justify-between">
             <div>
               <h3 className="text-sm font-medium uppercase tracking-[0.2em] text-slate-300">
-                Interactive Tech Cloud
+                Tools I work with
               </h3>
               <p className="mt-1 text-xs text-slate-500">
-                The toolkit. Battle-tested from PLC to LLM.
+                I build through coding agents: I specify, review, test and debug.
               </p>
             </div>
             <span className="font-mono text-xs text-slate-500">
@@ -262,7 +250,7 @@ export function Credentials() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.03 }}
                   whileHover={{ scale: 1.06, y: -2 }}
-                  className={`cursor-default rounded-full px-3 py-1.5 text-xs font-medium ring-1 transition-shadow hover:shadow-lg hover:shadow-violet-500/10 ${familyColor[entry.family]}`}
+                  className={`cursor-default rounded-full px-3 py-1.5 text-xs font-medium ring-1 transition-shadow hover:shadow-lg hover:shadow-cyan-500/10 ${familyColor[entry.family]}`}
                 >
                   {entry.name}
                 </motion.span>

@@ -37,7 +37,7 @@ export function Contact() {
     const name = encodeURIComponent(String(data.get("name") || ""));
     const email = encodeURIComponent(String(data.get("email") || ""));
     const message = encodeURIComponent(String(data.get("message") || ""));
-    const subject = `Portfolio inquiry — ${name || "Recruiter"}`;
+    const subject = `Portfolio inquiry: ${name || "Recruiter"}`;
     const body = `From: ${name} <${email}>\n\n${message}`;
     window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
     setSubmitted(true);
@@ -55,7 +55,7 @@ export function Contact() {
       >
         <motion.div variants={fadeInUp} className="mb-12 flex items-center gap-4">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-300">
-            06 — Direct Line
+            05 · Contact
           </span>
           <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/40 to-transparent" />
         </motion.div>
@@ -64,17 +64,16 @@ export function Contact() {
           variants={fadeInUp}
           className="mb-6 text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-7xl"
         >
-          Let&apos;s ship the
-          <br />
-          <span className="text-gradient">next agent together.</span>
+          Let&apos;s{" "}
+          <span className="text-gradient-emerald">talk.</span>
         </motion.h2>
 
         <motion.p
           variants={fadeInUp}
           className="mb-16 max-w-2xl text-lg text-slate-400"
         >
-          For technical conversations on Applied AI, agentic systems, or
-          vendor-side delivery. The inbox is open.
+          About Applied AI, about bringing new technology into an organisation,
+          or about building a business from zero. The inbox is open.
         </motion.p>
 
         <div className="grid gap-8 md:grid-cols-[1.2fr_1fr]">
@@ -110,16 +109,16 @@ export function Contact() {
                 rows={5}
                 required
                 placeholder="The role, the team, the stakes…"
-                className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-100 outline-none ring-violet-500/40 transition-all placeholder:text-slate-600 focus:border-violet-500/40 focus:bg-white/[0.05] focus:ring-2"
+                className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-100 outline-none ring-cyan-500/40 transition-all placeholder:text-slate-600 focus:border-cyan-500/40 focus:bg-white/[0.05] focus:ring-2"
               />
             </div>
             <button
               type="submit"
-              className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-violet-500 to-indigo-500 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all hover:shadow-xl hover:shadow-violet-500/40"
+              className="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 to-emerald-500 px-6 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition-all hover:shadow-xl hover:shadow-cyan-500/35"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               <span className="relative">
-                {submitted ? "Mail client opened ✓" : "Send Message"}
+                {submitted ? "Mail client opened ✓" : "Send message"}
               </span>
               <ArrowUpRight className="relative h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </button>
@@ -131,7 +130,7 @@ export function Contact() {
               className="group flex w-full items-center justify-between rounded-2xl glass p-5 text-left transition-all hover:bg-white/[0.05]"
             >
               <div className="flex items-center gap-4">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-violet-500/15 text-violet-200 ring-1 ring-violet-500/30">
+                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-200 ring-1 ring-cyan-500/30">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -208,7 +207,7 @@ function Field({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-100 outline-none ring-violet-500/40 transition-all placeholder:text-slate-600 focus:border-violet-500/40 focus:bg-white/[0.05] focus:ring-2"
+        className="w-full rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-100 outline-none ring-cyan-500/40 transition-all placeholder:text-slate-600 focus:border-cyan-500/40 focus:bg-white/[0.05] focus:ring-2"
       />
     </div>
   );

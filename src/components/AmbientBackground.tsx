@@ -2,7 +2,8 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
-export function AmbientBackground() {
+export function AmbientBackground({ tone = "default" }: { tone?: "default" | "calm" } = {}) {
+  const calm = tone === "calm";
   const { scrollY } = useScroll();
   // Parallax depth — blobs drift at different speeds, creating real depth
   // as the user scrolls. Closer blob moves faster, distant ones drift slower.
@@ -18,7 +19,9 @@ export function AmbientBackground() {
         style={{
           y: y1,
           background:
-            "radial-gradient(circle, rgba(139,92,246,0.45) 0%, rgba(99,102,241,0.15) 40%, transparent 70%)",
+            calm
+            ? "radial-gradient(circle, rgba(14,165,233,0.35) 0%, rgba(6,182,212,0.12) 40%, transparent 70%)"
+            : "radial-gradient(circle, rgba(139,92,246,0.45) 0%, rgba(99,102,241,0.15) 40%, transparent 70%)",
         }}
         className="absolute -top-40 -left-40 h-[40rem] w-[40rem] rounded-full opacity-30 blur-3xl animate-float-slow"
       />
@@ -36,7 +39,9 @@ export function AmbientBackground() {
           y: y3,
           animationDelay: "10s",
           background:
-            "radial-gradient(circle, rgba(167,139,250,0.4) 0%, transparent 70%)",
+            calm
+            ? "radial-gradient(circle, rgba(16,185,129,0.3) 0%, transparent 70%)"
+            : "radial-gradient(circle, rgba(167,139,250,0.4) 0%, transparent 70%)",
         }}
         className="absolute bottom-0 left-1/3 h-[30rem] w-[30rem] rounded-full opacity-20 blur-3xl animate-float-slow"
       />

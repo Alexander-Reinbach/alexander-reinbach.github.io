@@ -15,37 +15,32 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Reinbach — Architecting the Future of Agentic AI",
+  title: "Alex Reinbach · Applied GenAI at BMW, founder of SyncMode.io",
   description:
-    "Applied GenAI Lead at BMW Group. Full-Stack AI Builder. Bridge between frontier AI vendors and certified enterprise production, from technical discovery to production deployment, across 8 markets.",
+    "Engineering team lead and Applied GenAI lead at BMW Group in Munich. Founder of SyncMode.io. I bring new technology into daily use: an internal AI agent with about 500 weekly users, a platform rollout into eight markets, a business built from zero.",
   keywords: [
     "Alex Reinbach",
     "Applied GenAI",
-    "AI Solution Architect",
-    "Forward Deployed Engineer",
     "BMW",
-    "Multi-Agent Systems",
     "MCP",
-    "Vertex AI",
-    "Gemini",
-    "LLMOps",
+    "AI adoption",
     "Enterprise AI",
+    "Munich",
   ],
   authors: [{ name: "Alex Reinbach" }],
   creator: "Alex Reinbach",
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Alex Reinbach — Architecting the Future of Agentic AI",
+    title: "Alex Reinbach · Applied GenAI at BMW, founder of SyncMode.io",
     description:
-      "Applied GenAI Lead at BMW Group. Founder of SyncMode. Bridge between frontier AI and certified enterprise production, across 8 markets.",
+      "Eight years at BMW in Munich. An internal AI agent with about 500 weekly users, a rollout into eight markets, a business built from zero.",
     siteName: "Alex Reinbach",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex Reinbach — Architecting the Future of Agentic AI",
-    description:
-      "Applied GenAI Lead at BMW Group. Full-Stack AI Builder.",
+    title: "Alex Reinbach · Applied GenAI at BMW, founder of SyncMode.io",
+    description: "Eight years at BMW in Munich. Founder of SyncMode.io.",
   },
   robots: {
     index: true,

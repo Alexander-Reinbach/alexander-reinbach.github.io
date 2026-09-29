@@ -6,8 +6,8 @@ import { useState } from "react";
 const links = [
   { label: "About", href: "#about" },
   { label: "Work", href: "#work" },
-  { label: "Trajectory", href: "#experience" },
-  { label: "Stack", href: "#stack" },
+  { label: "Career", href: "#experience" },
+  { label: "Tools", href: "#stack" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -31,7 +31,7 @@ export function Nav() {
       <div className="mx-auto max-w-6xl px-6">
         <div
           className={`flex items-center justify-between rounded-full px-6 py-3 transition-all duration-300 ${
-            scrolled ? "glass-strong shadow-lg shadow-violet-500/5" : ""
+            scrolled ? "glass-strong shadow-lg shadow-cyan-500/5" : ""
           }`}
         >
           <a
@@ -60,7 +60,7 @@ export function Nav() {
 
           <a
             href="#contact"
-            className="hidden rounded-full bg-white px-4 py-1.5 text-sm font-medium text-slate-950 transition-all hover:bg-violet-300 sm:inline-flex"
+            className="hidden rounded-full bg-white px-4 py-1.5 text-sm font-medium text-slate-950 transition-all hover:bg-cyan-300 sm:inline-flex"
           >
             Let&apos;s talk
           </a>

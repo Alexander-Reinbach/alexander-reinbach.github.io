@@ -34,7 +34,7 @@ body {
 }
 
 ::selection {
-  background: rgb(139 92 246 / 0.3);
+  background: rgb(6 182 212 / 0.3);
   color: #fff;
 }
 
@@ -48,12 +48,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+  background: linear-gradient(180deg, #06b6d4, #10b981);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #818cf8, #a78bfa);
+  background: linear-gradient(180deg, #22d3ee, #34d399);
 }
 
 @utility glass {

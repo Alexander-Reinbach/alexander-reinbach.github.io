@@ -11,8 +11,8 @@ import { Contact } from "@/components/Contact";
 export default function Home() {
   return (
     <>
-      <AmbientBackground />
-      <ScrollProgress />
+      <AmbientBackground tone="calm" />
+      <ScrollProgress tone="calm" />
       <Nav />
       <main className="relative">
         <Hero />

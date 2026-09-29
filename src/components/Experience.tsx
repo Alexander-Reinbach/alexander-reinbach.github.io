@@ -9,113 +9,107 @@ type Role = {
   org: string;
   location: string;
   bullets: string[];
-  tone: "violet" | "cyan" | "emerald" | "amber" | "slate";
+  tone: "cyan" | "emerald" | "sky" | "slate";
   highlight?: boolean;
 };
 
 const roles: Role[] = [
   {
-    range: "01/2026 — today",
-    title: "GenAI Sandbox Founder",
-    org: "SyncMode",
-    location: "Munich · Remote",
+    range: "03/2023 – today",
+    title: "Teamlead, Simultaneous Engineering (Vehicle Dynamics) & Applied GenAI Lead",
+    org: "BMW Group",
+    location: "Munich, Germany",
     bullets: [
-      "Solo end-to-end build to learn what production-grade agentic workflows actually demand.",
-      "Architecture, multi-LLM orchestration (Gemini, OpenAI, Anthropic), deterministic guardrails, eval audits, production cloud.",
-      "Vertex AI Agent Builder · NotebookLM · ReAct patterns · MCP · Multi-agent runtime.",
+      "Lead a team of six engineers developing the tyres for the 7 Series, iX and XM, with purchasing, the plant, sales and quality. Homologation is a regular part of this work.",
+      "Lead GenAI adoption for my area: training on GitHub Copilot and working with LLMs, model choice, token spend and the rollout of skills and agents, presented up to executive level.",
+      "Designed and rolled out an internal agent: a custom MCP server in TypeScript over nine legacy systems, behind OAuth and Apigee. About 500 engineers use it every week.",
+      "Secured €0.8M for AI standardisation and defended around €5M in programme budgets at executive level.",
+    ],
+    tone: "cyan",
+    highlight: true,
+  },
+  {
+    range: "02/2026 – today",
+    title: "Founder",
+    org: "SyncMode.io",
+    location: "Munich, Germany",
+    bullets: [
+      "A relationship profile for couples. Live since May 2026, first paying customers in August 2026.",
+      "Offer, pricing, partner channel and sales calls myself; two partnerships with couples coaches.",
+      "Built by directing coding agents (Claude Code, Codex): I specify, review, test and debug.",
     ],
     tone: "emerald",
     highlight: true,
   },
   {
-    range: "03/2023 — today",
-    title: "Teamlead Simultaneous Engineering (BEV & ICE) & Applied GenAI Lead",
+    range: "09/2019 – 03/2023",
+    title: "Project Lead, Integrated PDM · Team Product Owner, Product Master Data",
     org: "BMW Group",
     location: "Munich, Germany",
     bullets: [
-      "Lead a 6-engineer team owning Simultaneous Engineering across BEV & ICE platforms (7 Series, iX, XM), translating R&D prototypes into certified global mass production.",
-      "Drive the Applied GenAI initiative in parallel: embedding LLM agents and MCP-based data access into operational workflows.",
-      "Own the full digital factory stack: ERP → SCADA → PLCs across multiple plants.",
-      "Built a custom MCP server (M2M + OAuth) inside the corporate environment. 600+ daily users, executive sponsorship secured.",
-      "Trusted advisor to executives bridging business, IT, and innovation.",
-    ],
-    tone: "violet",
-    highlight: true,
-  },
-  {
-    range: "05/2020 — 03/2023",
-    title: "Team Product Owner (Teamlead) — Product Master Data | Development & IT",
-    org: "BMW Group",
-    location: "Munich, Germany",
-    bullets: [
-      "Led the Product Master Data team within the iPDM Group, with strategic ownership of data governance across vehicle development and IT.",
-      "Directed global software deployments across 8 markets. 35% faster integration cycles, zero critical failures.",
-      "Designed end-to-end application architectures aligning technology strategy with business objectives.",
-    ],
-    tone: "violet",
-  },
-  {
-    range: "09/2018 — 09/2019",
-    title: "Project Specialist — Development",
-    org: "BMW Group",
-    location: "Munich, Germany",
-    bullets: [
-      "Project Specialist for Product Structure and Product Master Data within the integrated PDM landscape.",
-      "Process development and stakeholder alignment between Development and IT.",
-    ],
-    tone: "violet",
-  },
-  {
-    range: "01/2019 — 04/2019",
-    title: "Intrapreneur — BMW Accelerator",
-    org: "BMW Group",
-    location: "Munich, Germany",
-    bullets: [
-      "\"Act like a Start-Up. Deliver like a Grown-Up.\" Internal accelerator program for selected intrapreneurs.",
-      "Pitched and prototyped a venture concept end-to-end, from problem framing to executive review.",
-    ],
-    tone: "amber",
-  },
-  {
-    range: "09/2017 — 04/2018",
-    title: "Master's Thesis — Development & Sales",
-    org: "BMW Group",
-    location: "Munich, Germany",
-    bullets: [
-      "Thesis: \"Flexibilisation of the product supply management\", with focus on data governance & system integration.",
-      "Grade 1.0; influenced downstream automotive data strategies.",
-    ],
-    tone: "slate",
-  },
-  {
-    range: "09/2017 — 03/2018",
-    title: "Associate Consultant — Logistics & Start-Ups",
-    org: "Simon-Kucher & Partners",
-    location: "Munich, Germany",
-    bullets: [
-      "Sales and pricing in the U.S. intermodal logistics market.",
-      "Data-driven competitive reports and strategic recommendations for C-level decision-making.",
+      "Led the master data sub-project inside BMW's integrated PDM initiative: product-structure governance, data quality and cleansing, variant and complexity analysis, data interfaces to other business units.",
+      "Rollout to eight markets: migration out of the legacy systems, specification for IT, test and release, user training. Rollout cycles 35 % shorter, with no critical failure.",
+      "Team Product Owner from 05/2020.",
     ],
     tone: "cyan",
   },
   {
-    range: "04/2017 — 08/2017",
-    title: "Student Intern — Strategy & Analytics",
+    range: "09/2018 – 09/2019",
+    title: "Project Specialist, Development",
+    org: "BMW Group",
+    location: "Munich, Germany",
+    bullets: [
+      "Specialist for product structure and product master data. Redesigned the processes and systems behind it with IT and the departments that depend on that data.",
+    ],
+    tone: "cyan",
+  },
+  {
+    range: "01/2019 – 07/2019",
+    title: "Intrapreneur programmes",
+    org: "BMW Group",
+    location: "Munich, Germany",
+    bullets: [
+      "BMW Accelerator (12 weeks, 2019): pitched and prototyped a venture concept.",
+      "THINK.MAKE.START. with UnternehmerTUM (July 2019).",
+    ],
+    tone: "sky",
+  },
+  {
+    range: "10/2017 – 06/2018",
+    title: "Internship & Master's Thesis",
+    org: "BMW Group",
+    location: "Munich, Germany",
+    bullets: [
+      "Thesis: \"Flexibilisation of the product supply management through the interface between technology and sales using the example of BMW.\" Grade 1.0.",
+    ],
+    tone: "slate",
+  },
+  {
+    range: "09/2017 – 03/2018",
+    title: "Associate Consultant, Logistics & Start-Ups",
+    org: "Simon-Kucher & Partners",
+    location: "Munich, Germany",
+    bullets: [
+      "Pricing and strategy for clients in U.S. intermodal logistics; cold outreach to logistics start-ups.",
+    ],
+    tone: "sky",
+  },
+  {
+    range: "04/2017 – 08/2017",
+    title: "Student Intern, Strategy & Analytics",
     org: "Amazon",
     location: "Munich, Germany",
     bullets: [
-      "New Accounts Management team. Onboarded new Sellers onto the European marketplace.",
-      "Data-driven optimization of seller pipelines; embraced Customer Obsession from Day 1.",
+      "New Accounts Management: onboarding new sellers onto the European marketplace.",
     ],
-    tone: "amber",
+    tone: "slate",
   },
 ];
 
 const toneRing: Record<Role["tone"], string> = {
-  violet: "bg-violet-400 ring-violet-400/30",
   cyan: "bg-cyan-400 ring-cyan-400/30",
   emerald: "bg-emerald-400 ring-emerald-400/30",
-  amber: "bg-amber-400 ring-amber-400/30",
+  sky: "bg-sky-400 ring-sky-400/30",
   slate: "bg-slate-400 ring-slate-400/30",
 };
 
@@ -130,23 +124,22 @@ export function Experience() {
         className="mx-auto max-w-5xl"
       >
         <motion.div variants={fadeInUp} className="mb-12 flex items-center gap-4">
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-violet-300">
-            03 — Trajectory
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-300">
+            03 · Career
           </span>
-          <div className="h-px flex-1 bg-gradient-to-r from-violet-500/40 to-transparent" />
+          <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/40 to-transparent" />
         </motion.div>
 
         <motion.h2
           variants={fadeInUp}
           className="mb-16 max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
         >
-          A decade bridging
-          <br />
-          <span className="text-gradient">strategy &amp; stack-trace.</span>
+          Where I have{" "}
+          <span className="text-gradient-emerald">worked so far.</span>
         </motion.h2>
 
         <div className="relative">
-          <div className="absolute left-3 top-2 bottom-2 w-px bg-gradient-to-b from-violet-500/40 via-slate-700/40 to-transparent md:left-1/2 md:-translate-x-1/2" />
+          <div className="absolute left-3 top-2 bottom-2 w-px bg-gradient-to-b from-cyan-500/40 via-slate-700/40 to-transparent md:left-1/2 md:-translate-x-1/2" />
 
           <ol className="space-y-10">
             {roles.map((role, i) => (
@@ -167,7 +160,7 @@ export function Experience() {
 
                   <div
                     className={`group relative overflow-hidden rounded-2xl glass p-6 transition-all hover:bg-white/[0.04] ${
-                      role.highlight ? "ring-1 ring-violet-500/20" : ""
+                      role.highlight ? "ring-1 ring-cyan-500/20" : ""
                     }`}
                   >
                     {role.highlight && (
@@ -185,7 +178,7 @@ export function Experience() {
                     <h3 className="mt-2 text-lg font-bold text-slate-100">
                       {role.title}
                     </h3>
-                    <div className="text-sm text-violet-300">{role.org}</div>
+                    <div className="text-sm text-cyan-300">{role.org}</div>
                     <div className="mt-0.5 text-xs text-slate-500">{role.location}</div>
                     <ul className="mt-4 space-y-2">
                       {role.bullets.map((b, j) => (

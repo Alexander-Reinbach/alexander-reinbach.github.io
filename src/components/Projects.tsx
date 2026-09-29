@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Building2, Rocket, Factory, ArrowUpRight } from "lucide-react";
+import { Building2, Rocket, Globe, ArrowUpRight } from "lucide-react";
 import type { MouseEvent, ReactNode } from "react";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
 
@@ -12,65 +12,52 @@ type Project = {
   description: string;
   tags: string[];
   metrics: { label: string; value: string }[];
-  accent: "violet" | "emerald" | "amber";
+  accent: "cyan" | "emerald" | "sky";
   icon: ReactNode;
 };
 
 const projects: Project[] = [
   {
     index: "P01",
-    title: "BMW Group GenAI Infrastructure",
-    subtitle: "Custom MCP Server · Enterprise Scale",
+    title: "BMW GenAI agent",
+    subtitle: "Custom MCP server · nine legacy systems",
     description:
-      "Architected the connective tissue between frontier AI and the BMW production stack: a custom Model Context Protocol (MCP) server connecting APIs, legacy data silos, and security perimeters via M2M and OAuth. Scaled to 600+ daily active users, with measurable ROI and executive sponsorship secured.",
-    tags: ["Python", "MCP", "OAuth", "Enterprise RAG", "LLM Orchestration"],
+      "An agent that lets engineers ask in plain language instead of clicking through nine legacy engineering systems. A custom MCP server in TypeScript behind an OAuth and Apigee gateway, with its own role in the permission system and a staged rollout from integration to production. I chose the model by testing GPT, Gemini and Claude on accuracy, robustness and token cost.",
+    tags: ["MCP", "TypeScript", "OAuth · Apigee", "Model evaluation", "Staged rollout"],
     metrics: [
-      { label: "Daily Users", value: "600+" },
-      { label: "Stack", value: "M2M + OAuth" },
+      { label: "Weekly users", value: "~500" },
+      { label: "Less time, n=5", value: "~70 %" },
     ],
-    accent: "violet",
+    accent: "cyan",
     icon: <Building2 className="h-5 w-5" />,
   },
   {
     index: "P02",
     title: "SyncMode.io",
-    subtitle: "Founder · Sole Developer · GenAI Sandbox",
+    subtitle: "Founder · built solo with coding agents",
     description:
-      "My GenAI sandbox, built solo end-to-end to learn what production-grade agentic workflows actually demand. Multi-LLM orchestration (Gemini, OpenAI, Anthropic), deterministic guardrails, evaluation pipelines + observability, server-side tracking, Stripe + DSGVO compliance, Cloudflare-fronted Docker stack on Hetzner. Every layer hand-built, every failure mode logged. What I learn here feeds back into how I architect at scale.",
-    tags: [
-      "Python",
-      "Next.js",
-      "FastAPI",
-      "Multi-LLM",
-      "Eval-Driven",
-      "Production",
-    ],
+      "A relationship profile for couples: both partners answer 80 questions separately and get one 13-page report. The scoring runs in plain Python so results are reproducible, and four parallel Gemini calls write the text within fixed guardrails. It runs as separate services in Docker Compose behind Cloudflare. I built it by directing Claude Code and Codex, and I sell it myself: offer, price, partner channel and sales calls.",
+    tags: ["FastAPI", "Gemini", "Postgres · Redis", "Docker Compose", "Cloudflare", "Stripe"],
     metrics: [
-      { label: "Stack", value: "Full E2E" },
-      { label: "Team", value: "Solo" },
+      { label: "Live since", value: "May 2026" },
+      { label: "First customers", value: "Aug 2026" },
     ],
     accent: "emerald",
     icon: <Rocket className="h-5 w-5" />,
   },
   {
     index: "P03",
-    title: "Flagship Industrialization",
-    subtitle: "BMW 7 Series · iX · XM — R&D → Series Production",
+    title: "One platform, eight markets",
+    subtitle: "BMW · product master data · 2018–2023",
     description:
-      "Leading a team of 6 engineers translating bleeding-edge R&D prototypes into certified global mass production. Owning the full digital factory stack (ERP, SCADA, PLCs) across 8 international markets. Drove deployment cycles 35% faster with zero critical failures and pitched solutions to skeptical plant managers across three European plants.",
-    tags: [
-      "Industrialization",
-      "Homologation",
-      "ERP",
-      "SCADA · PLC",
-      "Stakeholder Mgmt",
-    ],
+      "I led the master data sub-project inside BMW's integrated PDM initiative: product-structure governance, data quality, variant and complexity analysis, and the data interfaces to other business units. For the rollout to eight markets I steered the migration out of the legacy systems, wrote the specification for IT, owned test and release, and trained the users.",
+    tags: ["Data governance", "Migration", "Market rollout", "User training"],
     metrics: [
-      { label: "Faster Cycles", value: "35%" },
-      { label: "Markets", value: "8" },
+      { label: "Shorter cycles", value: "35 %" },
+      { label: "Critical failures", value: "0" },
     ],
-    accent: "amber",
-    icon: <Factory className="h-5 w-5" />,
+    accent: "sky",
+    icon: <Globe className="h-5 w-5" />,
   },
 ];
 
@@ -86,7 +73,7 @@ export function Projects() {
       >
         <motion.div variants={fadeInUp} className="mb-12 flex items-center gap-4">
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-300">
-            02 — Live Production Showcase
+            02 · Work
           </span>
           <div className="h-px flex-1 bg-gradient-to-r from-cyan-500/40 to-transparent" />
         </motion.div>
@@ -95,10 +82,8 @@ export function Projects() {
           variants={fadeInUp}
           className="mb-16 max-w-4xl text-balance text-4xl font-bold leading-tight tracking-tight sm:text-5xl md:text-6xl"
         >
-          From demo to{" "}
-          <span className="text-gradient-emerald">compliance-ready production.</span>
-          <br />
-          <span className="text-slate-500">Through every blocker.</span>
+          Three projects,{" "}
+          <span className="text-gradient-emerald">start to finish.</span>
         </motion.h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -137,11 +122,11 @@ function ProjectCard({ project }: { project: Project }) {
   }
 
   const accentMap = {
-    violet: {
-      ring: "from-violet-500/40 via-indigo-500/20 to-transparent",
-      chip: "bg-violet-500/10 text-violet-200 ring-violet-500/30",
-      icon: "bg-violet-500/15 text-violet-200 ring-violet-500/30",
-      glow: "rgba(139,92,246,0.18)",
+    cyan: {
+      ring: "from-cyan-500/40 via-sky-500/20 to-transparent",
+      chip: "bg-cyan-500/10 text-cyan-200 ring-cyan-500/30",
+      icon: "bg-cyan-500/15 text-cyan-200 ring-cyan-500/30",
+      glow: "rgba(6,182,212,0.18)",
     },
     emerald: {
       ring: "from-emerald-500/40 via-cyan-500/20 to-transparent",
@@ -149,11 +134,11 @@ function ProjectCard({ project }: { project: Project }) {
       icon: "bg-emerald-500/15 text-emerald-200 ring-emerald-500/30",
       glow: "rgba(16,185,129,0.18)",
     },
-    amber: {
-      ring: "from-amber-500/40 via-orange-500/20 to-transparent",
-      chip: "bg-amber-500/10 text-amber-200 ring-amber-500/30",
-      icon: "bg-amber-500/15 text-amber-200 ring-amber-500/30",
-      glow: "rgba(245,158,11,0.18)",
+    sky: {
+      ring: "from-sky-500/40 via-indigo-500/20 to-transparent",
+      chip: "bg-sky-500/10 text-sky-200 ring-sky-500/30",
+      icon: "bg-sky-500/15 text-sky-200 ring-sky-500/30",
+      glow: "rgba(14,165,233,0.18)",
     },
   };
   const accentClasses = accentMap[project.accent];

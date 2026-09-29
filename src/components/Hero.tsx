@@ -38,8 +38,8 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            <Sparkles className="h-3 w-3 text-violet-300" strokeWidth={2.5} />
-            <span>Applied GenAI Lead · BMW Group · Founder · SyncMode · Munich</span>
+            <Sparkles className="h-3 w-3 text-cyan-300" strokeWidth={2.5} />
+            <span>BMW Group · Founder, SyncMode.io · Munich</span>
           </div>
         </motion.div>
 
@@ -47,21 +47,18 @@ export function Hero() {
           variants={fadeInUp}
           className="text-balance text-5xl font-bold leading-[1.15] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl pb-4"
         >
-          <span className="block text-slate-100">Shipping Applied AI</span>
-          <span className="block text-gradient pb-3">where the data lives.</span>
+          <span className="block text-slate-100">I bring new technology</span>
+          <span className="block text-gradient-emerald pb-3">into daily use.</span>
         </motion.h1>
 
         <motion.p
           variants={fadeInUp}
           className="mt-8 max-w-3xl text-balance text-lg leading-relaxed text-slate-400 sm:text-xl"
         >
-          Applied GenAI Lead at BMW Group. Founder of SyncMode.
-          <br className="hidden sm:block" />
-          Agents, MCP servers and RAG inside Fortune-500 enterprise constraints &mdash; from discovery to deployment, across{" "}
-          <span className="text-slate-200">
-            8 markets and 600+ engineers.
-          </span>{" "}
-          Curious enough to learn something new every release.
+          Eight years at BMW in Munich. Today I lead a vehicle dynamics team and
+          GenAI adoption for my area. In 2026 I founded{" "}
+          <span className="text-slate-200">SyncMode.io</span> and took it to its
+          first paying customers.
         </motion.p>
 
         <motion.div
@@ -70,23 +67,23 @@ export function Hero() {
         >
           <a
             href="#contact"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-indigo-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-violet-500/30 transition-all hover:shadow-xl hover:shadow-violet-500/40 hover:scale-[1.02]"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition-all hover:shadow-xl hover:shadow-cyan-500/35 hover:scale-[1.02]"
           >
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-            <span className="relative">Get in Touch</span>
+            <span className="relative">Get in touch</span>
             <ArrowDown className="relative h-4 w-4 transition-transform group-hover:translate-y-0.5" />
           </a>
         </motion.div>
 
         <motion.div
           variants={fadeInUp}
-          className="mt-20 grid grid-cols-2 gap-x-8 gap-y-6 text-xs uppercase tracking-[0.2em] text-slate-500 sm:flex sm:items-center sm:gap-12"
+          className="mt-20 grid grid-cols-3 gap-x-6 gap-y-6 text-[11px] uppercase tracking-[0.16em] text-slate-500 sm:flex sm:items-center sm:gap-12"
         >
-          <CounterStat target={600} suffix="+" label="Daily Users · MCP" />
+          <CounterStat target={500} label="weekly users of my AI agent" />
           <div className="hidden h-10 w-px bg-slate-800 sm:block" />
-          <CounterStat target={8} label="Markets Shipped" />
+          <CounterStat target={8} label="markets in one rollout" />
           <div className="hidden h-10 w-px bg-slate-800 sm:block" />
-          <CounterStat target={7} suffix="+ yr" label="BMW Group" />
+          <CounterStat target={8} label="years at BMW" />
         </motion.div>
       </motion.div>
 
@@ -139,8 +136,8 @@ function CounterStat({
   }, [inView, target, motionValue]);
 
   return (
-    <div ref={ref} className="flex flex-col items-center gap-2">
-      <span className="text-2xl font-bold text-gradient tabular-nums">
+    <div ref={ref} className="flex flex-col items-center gap-2 text-center">
+      <span className="text-2xl font-bold text-gradient-emerald tabular-nums">
         {display}
         {suffix}
       </span>

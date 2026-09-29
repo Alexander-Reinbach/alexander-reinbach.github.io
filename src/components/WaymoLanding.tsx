@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 import {
   ArrowRight,
   ArrowUpRight,
-  Award,
+  BatteryCharging,
+  Euro,
   Globe,
   GraduationCap,
   Mail,
   MapPin,
   Route,
   ShieldCheck,
-  Sparkles,
-  Store,
 } from "lucide-react";
 import type { ReactNode } from "react";
 import { fadeInUp, staggerContainer } from "@/lib/motion";
@@ -25,179 +24,109 @@ const LINKEDIN = "https://www.linkedin.com/in/alexander-r-929814144/";
 const PORTFOLIO = "https://alexander-reinbach.github.io/";
 const MAIL_SUBJECT = "Strategy%20%26%20BizOps%20Lead%2C%20Germany";
 
-type Fit = {
-  ask: string;
-  answer: string;
-};
+// Hero fact card. Everything here is on the CV.
+const ticket: { label: string; value: string }[] = [
+  { label: "Based in", value: "Munich" },
+  { label: "German", value: "Native" },
+  { label: "BMW Group", value: "8 years" },
+  { label: "Platform rollout", value: "8 markets" },
+  { label: "Own business", value: "Paying customers since Aug 2026" },
+  { label: "Travel", value: "30 % is fine" },
+];
 
-// Left column: the role's own words. Right column: where I have done it.
-const fits: Fit[] = [
+// Waymo's public launch sequence for Munich (TechCrunch, 25 Aug 2026), next to where I have done
+// the same kind of step. Left column is Waymo's plan, right column is my evidence.
+type Step = { waymo: string; detail: string; mine: string };
+
+const steps: Step[] = [
   {
-    ask: "Build a new business from the ground up",
-    answer:
-      "I founded SyncMode.io in February 2026. I chose the offer, set the price, built the funnel, signed two partnerships with couples coaches and ran the sales calls. The first paying customers came in August.",
+    waymo: "Map the city",
+    detail: "Trained drivers map Munich's streets before anything drives itself.",
+    mine: "I start from what is really there. The BMW agent was scoped against nine legacy engineering systems as they are, not as a demo would like them.",
   },
   {
-    ask: "Market analysis and quantitative modeling",
-    answer:
-      "Pricing scenarios for U.S. logistics clients at Simon-Kucher. Business cases in Excel and Power Query at BMW. At SyncMode I positioned the price against the real alternative: one hour of couples therapy costs from €150.",
+    waymo: "Test with a specialist on board",
+    detail: "Autonomous driving, with a person ready to take over.",
+    mine: "The agent went through its own integration stage before production. It has a dedicated role in the permission system, so every call can be checked.",
   },
   {
-    ask: "Quarterback large cross-functional teams",
-    answer:
-      "Tyre development for the 7 Series, iX and XM runs through purchasing, the plant, sales and quality. I lead a team of six engineers in the middle of it and keep one plan moving across all of them.",
+    waymo: "Rides for employees and invited guests",
+    detail: "A closed group first.",
+    mine: "The agent was built for our own engineers. I measured it with five of them, before and after: about 70 % less time to an answer on complex questions.",
   },
   {
-    ask: "Pricing scenarios and business cases",
-    answer:
-      "I secured €0.8M for AI standardisation at BMW and have defended around €5M in programme budgets at executive level. At SyncMode I replaced discount codes with a transparent €69 direct price, after feedback that artificial anchors cost trust in the German market.",
+    waymo: "Limited public service",
+    detail: "A first group of riders in a defined area.",
+    mine: "One platform, eight markets. I steered the migration, the specification, test, release and training in each market. Rollout cycles got 35 % shorter, with no critical failure.",
   },
   {
-    ask: "Define and track KPIs for a local business",
-    answer:
-      "At SyncMode I track the funnel from quiz to email gate to purchase; about 36 % of people who reach the gate go on to submit. Revenue counts only when a payment has cleared. For the BMW agent I report weekly active users, not sign-ups.",
-  },
-  {
-    ask: "Navigate policy and regulation in Germany",
-    answer:
-      "Homologation is a regular part of my tyre work at BMW. I have also taken a new technology through security, compliance and the works council. At SyncMode I own the GDPR side myself, including the data protection impact assessment.",
+    waymo: "Full public service",
+    detail: "Planned for the end of 2027, once the approvals are in place.",
+    mine: "Getting a yes is my day job. Homologation is part of my tyre work at BMW, and the agent went live after security, compliance and the works council had agreed.",
   },
 ];
 
-type Story = {
-  index: string;
+type Link = {
   icon: ReactNode;
   title: string;
-  subtitle: string;
-  description: string;
-  result: string;
-  tags: string[];
-  accent: "cyan" | "emerald" | "sky";
+  fact: string;
+  mine: string;
 };
 
-const stories: Story[] = [
+// Three links between Waymo in Munich and my background that a generic applicant does not have.
+const links: Link[] = [
   {
-    index: "01",
-    icon: <Store className="h-5 w-5" />,
-    title: "A go-to-market from zero",
-    subtitle: "SyncMode.io · founder · since Feb 2026",
-    description:
-      "A relationship profile for couples: each partner answers 80 questions in private, and both perspectives become one report. I launched at €99 with discount codes, then switched to a €69 direct price for the first 100 profiles. Two couples coaches recommend it, and I am in pilot talks with a network of more than 200 therapists.",
-    result: "Live since May, first paying customers in August.",
-    tags: ["Offer and pricing", "Partner channel", "Funnel KPIs"],
-    accent: "emerald",
+    icon: <BatteryCharging className="h-5 w-5" />,
+    title: "Electric cars, from the tyre up",
+    fact: "In Munich, Waymo will drive only battery-electric cars.",
+    mine: "My team develops the tyres for the 7 Series, iX and XM. Rolling resistance affects range, and tyre noise shapes how quiet the ride feels. For a fleet that drives all day, both turn into operating cost and rider comfort.",
   },
   {
-    index: "02",
-    icon: <Globe className="h-5 w-5" />,
-    title: "One platform, eight markets",
-    subtitle: "BMW · product master data · 2019–2023",
-    description:
-      "For the rollout of BMW's product master data platform I steered the migration out of the legacy systems, wrote the specification for IT, owned test and release, and trained the users in each market.",
-    result: "Rollout cycles 35 % shorter, with no critical failure.",
-    tags: ["Market rollout", "Operations", "Training"],
-    accent: "cyan",
-  },
-  {
-    index: "03",
     icon: <ShieldCheck className="h-5 w-5" />,
-    title: "A new technology through German approvals",
-    subtitle: "BMW · Applied GenAI Lead · since 2023",
-    description:
-      "An internal AI agent for engineers. It got its own role in the permission system, so security, compliance and the works council could see what it does before they said yes. Afterwards I measured whether people actually use it.",
-    result: "About 500 engineers use it every week.",
-    tags: ["Approvals", "Adoption", "Measurement"],
-    accent: "sky",
+    title: "Four approvals, one programme",
+    fact: "A commercial service in Germany needs four approvals: a KBA test permit, a KBA operating licence, the state's approval of the operating area, and a licence under the passenger transport law.",
+    mine: "At BMW, homologation has to move in step with tyre development, purchasing and the plant. Running approvals alongside engineering and operations is part of my job today.",
+  },
+  {
+    icon: <Euro className="h-5 w-5" />,
+    title: "A price German riders trust",
+    fact: "Taxi fares in Munich are set by the city. That is the price a Waymo ride will be compared with.",
+    mine: "At SyncMode I launched at €99 with discount codes. After feedback that artificial anchors cost trust in the German market, I moved to a transparent €69 direct price. I compared the price with the real alternative: an hour of couples therapy from €150.",
   },
 ];
 
-type Station = {
-  range: string;
-  title: string;
-  org: string;
-  note?: string;
-  current?: boolean;
-  tone: "cyan" | "emerald" | "sky" | "slate";
-};
+// SyncMode milestones, dates from canonical-facts.md.
+const route: { date: string; title: string; note: string }[] = [
+  { date: "Feb 2026", title: "Founded", note: "Next to my job at BMW" },
+  { date: "2 May", title: "Live at €99", note: "With discount codes" },
+  { date: "24 May", title: "€69 direct price", note: "Codes and price anchor removed" },
+  { date: "18 Jul", title: "€9.90 first step", note: "A cheaper way in" },
+  { date: "10 Aug", title: "First paying customers", note: "I ran the sales calls" },
+];
+
+type Station = { range: string; title: string; org: string; current?: boolean };
 
 const timeline: Station[] = [
-  {
-    range: "03/2023 – today",
-    title: "Teamlead, Simultaneous Engineering (Vehicle Dynamics) & Applied GenAI Lead",
-    org: "BMW Group · Munich",
-    note: "Half the role: a team of six engineers developing tyres for the 7 Series, iX and XM, including homologation. The other half: GenAI adoption for my area, up to executive level.",
-    current: true,
-    tone: "cyan",
-  },
-  {
-    range: "02/2026 – today",
-    title: "Founder",
-    org: "SyncMode.io · Munich",
-    note: "Built from zero to first paying customers in six months, next to the job at BMW.",
-    current: true,
-    tone: "emerald",
-  },
-  {
-    range: "09/2018 – 03/2023",
-    title: "Project Specialist → Project Lead, Integrated PDM → Team Product Owner",
-    org: "BMW Group · Munich",
-    note: "Product master data and product-structure governance. Rollout to eight markets. BMW Accelerator and THINK.MAKE.START. with UnternehmerTUM in 2019.",
-    tone: "cyan",
-  },
-  {
-    range: "09/2017 – 03/2018",
-    title: "Associate Consultant, Logistics & Start-Ups",
-    org: "Simon-Kucher & Partners · Munich",
-    note: "Pricing scenarios for U.S. intermodal logistics clients, cold outreach to logistics start-ups.",
-    tone: "sky",
-  },
-  {
-    range: "04/2017 – 08/2017",
-    title: "Student Intern, Strategy & Analytics",
-    org: "Amazon Germany · Munich",
-    note: "New Accounts Management.",
-    tone: "slate",
-  },
+  { range: "03/2023 – today", title: "Teamlead, Simultaneous Engineering (Vehicle Dynamics) & Applied GenAI Lead", org: "BMW Group · Munich", current: true },
+  { range: "02/2026 – today", title: "Founder", org: "SyncMode.io · Munich", current: true },
+  { range: "09/2018 – 03/2023", title: "Project Specialist → Project Lead, Integrated PDM → Team Product Owner", org: "BMW Group · Munich" },
+  { range: "09/2017 – 03/2018", title: "Associate Consultant, Logistics & Start-Ups", org: "Simon-Kucher & Partners · Munich" },
+  { range: "04/2017 – 08/2017", title: "Student Intern, Strategy & Analytics", org: "Amazon Germany · Munich" },
 ];
 
 const education = [
   "M.Sc. Management & Technology, Technical University of Munich (thesis at BMW, grade 1.0)",
-  "Exchange, M.Sc. Industrial Engineering, Beijing Institute of Technology",
   "B.Sc. Industrial Engineering, Karlsruhe University of Applied Sciences",
-  "Exchange, Edinburgh Napier University (DAAD PROMOS)",
+  "Exchanges in Beijing (BIT) and Edinburgh (Napier)",
+  "Google Cloud Generative AI Leader · Anthropic Claude Code 101 and Building effective human-agent teams (2026)",
 ];
 
-const extras = [
-  "German native · English C1 · French A2",
-  "Based in Munich, open to the 30 % travel of the role",
-  "Google Cloud Generative AI Leader (2026)",
-  "Anthropic: Claude Code 101, Building effective human-agent teams (2026)",
+const sources = [
+  { label: "Waymo: Servus München, 25 Aug 2026", href: "https://waymo.com/blog/2026/08/waymo-in-munich/" },
+  { label: "TechCrunch: Waymo robotaxis are headed to Munich", href: "https://techcrunch.com/2026/08/25/waymo-robotaxis-are-headed-to-munich/" },
+  { label: "electrive: Waymo plans robotaxi launch in Munich for 2027", href: "https://www.electrive.com/2026/08/26/waymo-plans-robotaxi-launch-in-munich-for-2027/" },
+  { label: "electrive: Waymo also preparing Berlin, 14 Sep 2026", href: "https://www.electrive.com/2026/09/14/waymo-also-preparing-robotaxi-service-launch-in-berlin/" },
 ];
-
-const toneDot: Record<Station["tone"], string> = {
-  cyan: "bg-cyan-400 ring-cyan-400/25",
-  emerald: "bg-emerald-400 ring-emerald-400/25",
-  sky: "bg-sky-400 ring-sky-400/25",
-  slate: "bg-slate-400 ring-slate-400/25",
-};
-
-const accentMap = {
-  cyan: {
-    ring: "from-cyan-500/40 via-sky-500/20 to-transparent",
-    chip: "bg-cyan-500/10 text-cyan-200 ring-cyan-500/30",
-    icon: "bg-cyan-500/15 text-cyan-200 ring-cyan-500/30",
-  },
-  emerald: {
-    ring: "from-emerald-500/40 via-cyan-500/20 to-transparent",
-    chip: "bg-emerald-500/10 text-emerald-200 ring-emerald-500/30",
-    icon: "bg-emerald-500/15 text-emerald-200 ring-emerald-500/30",
-  },
-  sky: {
-    ring: "from-sky-500/40 via-indigo-500/20 to-transparent",
-    chip: "bg-sky-500/10 text-sky-200 ring-sky-500/30",
-    icon: "bg-sky-500/15 text-sky-200 ring-sky-500/30",
-  },
-} as const;
 
 export function WaymoLanding() {
   return (
@@ -206,195 +135,214 @@ export function WaymoLanding() {
       <ScrollProgress tone="calm" />
       <main className="relative">
         {/* HERO */}
-        <section className="relative flex min-h-screen items-center justify-center px-6 pt-28 pb-24">
-          <div className="absolute inset-0 bg-grid opacity-[0.4]" />
+        <section className="relative flex min-h-screen items-center px-6 pt-24 pb-20">
+          <div className="absolute inset-0 bg-grid opacity-[0.35]" />
           <motion.div
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="relative mx-auto flex max-w-5xl flex-col items-center text-center"
+            className="relative mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.35fr_1fr]"
           >
-            <motion.div variants={fadeInUp} className="mb-6">
-              <div className="relative inline-block">
-                <div className="absolute -inset-1 rounded-full bg-gradient-to-br from-cyan-500/40 via-sky-500/30 to-emerald-500/30 blur-sm" />
-                <img
-                  src={withBase("/alex.jpg")}
-                  alt="Alexander Reinbach"
-                  className="relative h-28 w-28 rounded-full object-cover ring-2 ring-white/10"
-                />
-              </div>
-            </motion.div>
+            <div>
+              <motion.div variants={fadeInUp}>
+                <div className="mb-8 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-slate-300">
+                  <MapPin className="h-3 w-3 text-cyan-300" strokeWidth={2.5} />
+                  <span>Application · Strategy &amp; BizOps Lead, Germany</span>
+                </div>
+              </motion.div>
+
+              <motion.h1
+                variants={fadeInUp}
+                className="text-balance text-5xl font-bold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl pb-3"
+              >
+                <span className="text-gradient-emerald pb-2">Servus, Waymo.</span>
+              </motion.h1>
+
+              <motion.p
+                variants={fadeInUp}
+                className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-300 sm:text-xl"
+              >
+                You are starting in Munich, the city where I have spent eight years
+                working on cars at BMW. I have taken new technology through German
+                approvals, rolled out one platform to eight markets and built a business
+                of my own from zero. I would like to help build yours here.
+              </motion.p>
+
+              <motion.div variants={fadeInUp} className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <a
+                  href={`mailto:${EMAIL}?subject=${MAIL_SUBJECT}`}
+                  className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition-all hover:shadow-xl hover:shadow-cyan-500/35 hover:scale-[1.02]"
+                >
+                  <span>Get in touch</span>
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </a>
+                <a
+                  href="#plan"
+                  className="inline-flex items-center justify-center gap-2 rounded-full glass px-7 py-3.5 text-sm font-semibold text-slate-200 transition-all hover:text-white"
+                >
+                  <Route className="h-4 w-4" />
+                  <span>Your Munich plan and my experience</span>
+                </a>
+              </motion.div>
+            </div>
 
             <motion.div variants={fadeInUp}>
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-medium text-slate-300">
-                <MapPin className="h-3 w-3 text-cyan-300" strokeWidth={2.5} />
-                <span>Application · Strategy &amp; BizOps Lead, Germany · Munich · Native German</span>
-              </div>
-            </motion.div>
-
-            <motion.h1
-              variants={fadeInUp}
-              className="text-balance text-4xl font-bold leading-[1.15] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl pb-4"
-            >
-              <span className="block text-slate-100">Eight years inside BMW.</span>
-              <span className="block text-gradient-emerald pb-3">One business built from zero.</span>
-            </motion.h1>
-
-            <motion.p
-              variants={fadeInUp}
-              className="mt-8 max-w-3xl text-balance text-lg leading-relaxed text-slate-400 sm:text-xl"
-            >
-              I know the German car industry from the OEM side, and I have taken a
-              product from an idea to paying customers on my own. I would like to bring
-              both to{" "}
-              <span className="text-slate-200">Waymo&rsquo;s start in Germany</span>.
-            </motion.p>
-
-            <motion.div
-              variants={fadeInUp}
-              className="mt-12 flex flex-col items-center gap-4 sm:flex-row"
-            >
-              <a
-                href={`mailto:${EMAIL}?subject=${MAIL_SUBJECT}`}
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition-all hover:shadow-xl hover:shadow-cyan-500/35 hover:scale-[1.02]"
-              >
-                <span className="relative">Get in touch</span>
-                <ArrowRight className="relative h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <a
-                href={PORTFOLIO}
-                className="inline-flex items-center gap-2 rounded-full glass px-7 py-3.5 text-sm font-semibold text-slate-200 transition-all hover:text-white"
-              >
-                <Globe className="h-4 w-4" />
-                <span>Full portfolio</span>
-              </a>
-            </motion.div>
-
-            <motion.div
-              variants={fadeInUp}
-              className="mt-20 grid grid-cols-3 gap-x-6 gap-y-6 text-[11px] uppercase tracking-[0.16em] text-slate-500 sm:flex sm:items-center sm:gap-12"
-            >
-              <Stat value="8" label="markets in one rollout" />
-              <div className="hidden h-10 w-px bg-slate-800 sm:block" />
-              <Stat value="6" label="months to first sale" />
-              <div className="hidden h-10 w-px bg-slate-800 sm:block" />
-              <Stat value="500" label="weekly users of my AI agent" />
+              <TicketCard />
             </motion.div>
           </motion.div>
         </section>
 
-        {/* FIT */}
-        <Section eyebrow="01 · The role" accentLine="from-cyan-500/40">
+        {/* PLAN */}
+        <Section id="plan" eyebrow="01 · Your plan for Munich" accentLine="from-cyan-500/40">
           <SectionHeading>
-            What the role asks for,{" "}
-            <span className="text-gradient-emerald">and where I have done it.</span>
+            Five steps to a public service,{" "}
+            <span className="text-gradient-emerald">and where I have done each kind of step.</span>
           </SectionHeading>
-          <div className="mt-4 overflow-hidden rounded-3xl glass-strong">
-            <div className="hidden grid-cols-[minmax(0,2fr)_minmax(0,5fr)] gap-8 border-b border-slate-800/80 px-7 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500 sm:grid">
-              <span>From the job description</span>
-              <span>Where I have done it</span>
-            </div>
-            {fits.map((f, i) => (
-              <motion.div
-                key={f.ask}
-                variants={fadeInUp}
-                className={`grid gap-2 p-6 sm:grid-cols-[minmax(0,2fr)_minmax(0,5fr)] sm:gap-8 sm:p-7 ${
-                  i > 0 ? "border-t border-slate-800/80" : ""
-                }`}
-              >
-                <div className="text-[15px] font-semibold leading-snug text-slate-100">{f.ask}</div>
-                <p className="text-[14px] leading-relaxed text-slate-400">{f.answer}</p>
+          <motion.p variants={fadeInUp} className="-mt-2 mb-10 max-w-3xl text-[15px] leading-relaxed text-slate-400">
+            Waymo has said it will follow its usual sequence in Munich. I have not
+            launched a robotaxi. I have taken technology through the same kind of
+            stages inside a German company.
+          </motion.p>
+          <ol className="relative space-y-4">
+            <div className="absolute left-[19px] top-4 bottom-4 hidden w-px border-l border-dashed border-cyan-500/40 md:block" />
+            {steps.map((s, i) => (
+              <motion.li key={s.waymo} variants={fadeInUp} className="relative md:pl-14">
+                <span className="absolute left-0 top-6 hidden h-10 w-10 items-center justify-center rounded-full bg-slate-950 font-mono text-sm font-semibold text-cyan-300 ring-1 ring-cyan-500/40 md:inline-flex">
+                  {i + 1}
+                </span>
+                <div className="grid overflow-hidden rounded-2xl glass-strong md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+                  <div className="border-b border-slate-800/80 p-6 md:border-b-0 md:border-r">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-cyan-300/80">
+                      <span className="md:hidden">Step {i + 1} · </span>Waymo
+                    </div>
+                    <div className="mt-1.5 text-lg font-bold text-slate-100">{s.waymo}</div>
+                    <p className="mt-1 text-[13px] leading-relaxed text-slate-400">{s.detail}</p>
+                  </div>
+                  <div className="p-6">
+                    <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-emerald-300/80">Where I did this</div>
+                    <p className="mt-1.5 text-[14px] leading-relaxed text-slate-300">{s.mine}</p>
+                  </div>
+                </div>
+              </motion.li>
+            ))}
+          </ol>
+        </Section>
+
+        {/* LINKS */}
+        <Section eyebrow="02 · Munich specifics" accentLine="from-emerald-500/40">
+          <SectionHeading>
+            Three facts about Waymo in Germany,{" "}
+            <span className="text-gradient-emerald">and my experience with each.</span>
+          </SectionHeading>
+          <div className="mt-4 grid gap-6 lg:grid-cols-3">
+            {links.map((l) => (
+              <motion.div key={l.title} variants={fadeInUp}>
+                <div className="flex h-full flex-col rounded-3xl glass-strong p-7">
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-200 ring-1 ring-emerald-500/30">
+                    {l.icon}
+                  </div>
+                  <h3 className="mt-5 text-xl font-bold leading-snug text-slate-100">{l.title}</h3>
+                  <p className="mt-3 rounded-xl bg-cyan-500/[0.07] p-3 text-[13px] leading-relaxed text-cyan-100/90 ring-1 ring-cyan-500/20">
+                    {l.fact}
+                  </p>
+                  <p className="mt-4 text-[14px] leading-relaxed text-slate-400">{l.mine}</p>
+                </div>
               </motion.div>
             ))}
           </div>
         </Section>
 
-        {/* STORIES */}
-        <Section eyebrow="02 · Three examples" accentLine="from-emerald-500/40">
+        {/* ROUTE */}
+        <Section eyebrow="03 · A go-to-market from zero" accentLine="from-sky-500/40">
           <SectionHeading>
-            Three projects,{" "}
-            <span className="text-gradient-emerald">start to finish.</span>
+            SyncMode.io, from founding{" "}
+            <span className="text-gradient-emerald">to the first paying customers.</span>
           </SectionHeading>
-          <div className="mt-4 grid gap-6 lg:grid-cols-3">
-            {stories.map((s) => (
-              <motion.div key={s.index} variants={fadeInUp}>
-                <StoryCard story={s} />
-              </motion.div>
+          <motion.p variants={fadeInUp} className="-mt-2 mb-12 max-w-3xl text-[15px] leading-relaxed text-slate-400">
+            A relationship profile for couples: each partner answers 80 questions in
+            private, and both perspectives become one report. Offer, price, funnel,
+            partners and sales calls were my decisions. Two couples coaches now
+            recommend it, and about 36 % of people who reach the email gate go on to
+            submit their answers.
+          </motion.p>
+          <motion.ol variants={fadeInUp} className="relative grid gap-6 md:grid-cols-5 md:gap-4">
+            <div className="absolute left-0 right-0 top-[11px] hidden border-t-2 border-dashed border-emerald-500/30 md:block" />
+            {route.map((r, i) => (
+              <li key={r.date} className="relative flex gap-4 md:block">
+                <span
+                  className={`relative z-10 mt-0.5 inline-block h-6 w-6 shrink-0 rounded-full ring-4 ${
+                    i === route.length - 1 ? "bg-emerald-400 ring-emerald-400/30" : "bg-slate-950 ring-cyan-500/40"
+                  }`}
+                />
+                <div className="md:mt-4">
+                  <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-slate-500">{r.date}</div>
+                  <div className="mt-1 text-[15px] font-semibold text-slate-100">{r.title}</div>
+                  <div className="mt-0.5 text-[13px] text-slate-400">{r.note}</div>
+                </div>
+              </li>
             ))}
-          </div>
+          </motion.ol>
         </Section>
 
         {/* CAREER */}
-        <Section eyebrow="03 · Career" accentLine="from-sky-500/40">
-          <SectionHeading>
-            Where I have{" "}
-            <span className="text-gradient-emerald">worked so far.</span>
-          </SectionHeading>
-          <div className="relative mt-4">
-            <div className="absolute left-2.5 top-2 bottom-2 w-px bg-gradient-to-b from-cyan-500/40 via-slate-700/40 to-transparent" />
-            <ol className="space-y-4">
-              {timeline.map((s) => (
-                <motion.li key={`${s.range}-${s.title}`} variants={fadeInUp} className="relative pl-10">
-                  <span className={`absolute left-0 top-2 h-5 w-5 rounded-full ring-4 ${toneDot[s.tone]}`}>
-                    <span className="absolute inset-0 m-1 rounded-full bg-slate-950" />
-                  </span>
-                  <div className="rounded-2xl glass p-5">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-slate-500">
-                        {s.range}
-                      </span>
-                      {s.current && (
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-emerald-300 ring-1 ring-emerald-500/30">
-                          <span className="h-1 w-1 rounded-full bg-emerald-400" />
-                          Current
-                        </span>
-                      )}
+        <Section eyebrow="04 · Career" accentLine="from-cyan-500/40">
+          <div className="grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+            <motion.div variants={fadeInUp} className="rounded-3xl glass-strong p-7">
+              <ol className="space-y-5">
+                {timeline.map((s) => (
+                  <li key={s.range} className="grid gap-1 sm:grid-cols-[9rem_1fr] sm:gap-4">
+                    <div className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 sm:pt-1">
+                      {s.range}
                     </div>
-                    <h3 className="mt-1.5 text-base font-bold leading-snug text-slate-100">{s.title}</h3>
-                    <div className="text-sm text-cyan-300">{s.org}</div>
-                    {s.note && (
-                      <p className="mt-2 text-[13px] leading-relaxed text-slate-400">{s.note}</p>
-                    )}
-                  </div>
-                </motion.li>
-              ))}
-            </ol>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <motion.div variants={fadeInUp}>
-              <InfoCard icon={<GraduationCap className="h-5 w-5" />} title="Education" items={education} />
+                    <div>
+                      <div className="text-[15px] font-semibold leading-snug text-slate-100">
+                        {s.title}
+                        {s.current && (
+                          <span className="ml-2 inline-flex translate-y-[-1px] items-center rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-emerald-300 ring-1 ring-emerald-500/30">
+                            Current
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-[13px] text-cyan-300">{s.org}</div>
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </motion.div>
-            <motion.div variants={fadeInUp}>
-              <InfoCard icon={<Award className="h-5 w-5" />} title="Languages and more" items={extras} />
+            <motion.div variants={fadeInUp} className="rounded-3xl glass-strong p-7">
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-200 ring-1 ring-cyan-500/30">
+                <GraduationCap className="h-5 w-5" />
+              </div>
+              <h3 className="mt-5 text-lg font-bold text-slate-100">Education and certificates</h3>
+              <ul className="mt-4 space-y-2.5">
+                {education.map((e) => (
+                  <li key={e} className="flex gap-2.5 text-[14px] leading-relaxed text-slate-400">
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cyan-400" />
+                    <span>{e}</span>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           </div>
         </Section>
 
         {/* WHY */}
-        <Section eyebrow="04 · Why Waymo" accentLine="from-emerald-500/40">
+        <Section eyebrow="05 · Why now" accentLine="from-emerald-500/40">
           <div className="relative overflow-hidden rounded-3xl glass-strong p-8 sm:p-12">
             <div className="absolute right-0 top-0 h-40 w-40 -translate-y-1/3 translate-x-1/3 rounded-full bg-emerald-500/10 blur-3xl" />
-            <Route className="h-8 w-8 text-emerald-300" />
-            <h3 className="mt-6 max-w-3xl text-2xl font-bold leading-snug tracking-tight text-slate-100 sm:text-3xl">
-              Why Waymo, and why now.
-            </h3>
-            <div className="mt-5 max-w-3xl space-y-4 text-[15px] leading-relaxed text-slate-400">
+            <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-slate-300">
               <p>
-                At BMW a new car takes years from the first idea to the road. Waymo
-                already drives people with no one behind the wheel, and now it is
-                coming to Germany, to the city I live in.
+                At BMW a new car takes years from the first idea to the road. In Munich,
+                Waymo plans to go from the first mapping drives to a public service by
+                the end of 2027.
               </p>
-              <p>
-                The first years in a new market decide which cities say yes and whether
-                people trust the service. That is the phase I want to work in, from
-                Munich.
-              </p>
+              <p className="text-slate-100">I want to spend those months working on it, from Munich.</p>
             </div>
           </div>
         </Section>
 
         {/* CONTACT */}
-        <section className="relative px-6 pb-32 pt-12">
+        <section className="relative px-6 pb-20 pt-12">
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -402,10 +350,6 @@ export function WaymoLanding() {
             viewport={{ once: true, margin: "-80px" }}
             className="mx-auto max-w-3xl text-center"
           >
-            <motion.div variants={fadeInUp} className="mb-4 inline-flex items-center gap-2 text-cyan-300">
-              <Sparkles className="h-4 w-4" />
-              <span className="font-mono text-xs uppercase tracking-[0.3em]">Contact</span>
-            </motion.div>
             <motion.h2
               variants={fadeInUp}
               className="text-balance text-3xl font-bold leading-tight tracking-tight text-slate-100 sm:text-4xl pb-2"
@@ -420,14 +364,64 @@ export function WaymoLanding() {
               <ContactLink href={LINKEDIN} icon={<LinkedinIcon className="h-4 w-4" />}>
                 LinkedIn
               </ContactLink>
+              <ContactLink href={PORTFOLIO} icon={<Globe className="h-4 w-4" />}>
+                Full portfolio
+              </ContactLink>
             </motion.div>
             <motion.p variants={fadeInUp} className="mt-10 text-xs text-slate-500">
               Alexander Reinbach · Munich · +49&nbsp;170&nbsp;46&nbsp;05&nbsp;486
             </motion.p>
+            <motion.div variants={fadeInUp} className="mx-auto mt-12 max-w-xl border-t border-white/5 pt-6 text-left">
+              <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+                Sources on Waymo&rsquo;s plans
+              </div>
+              <ul className="mt-3 space-y-1.5">
+                {sources.map((s) => (
+                  <li key={s.href}>
+                    <a href={s.href} className="text-xs text-slate-400 underline decoration-slate-700 underline-offset-2 hover:text-slate-200">
+                      {s.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </motion.div>
         </section>
       </main>
     </>
+  );
+}
+
+function TicketCard() {
+  return (
+    <div className="relative mx-auto w-full max-w-sm">
+      <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-br from-cyan-500/30 via-sky-500/10 to-emerald-500/30 blur-lg" />
+      <div className="relative overflow-hidden rounded-[1.75rem] glass-strong">
+        <div className="flex items-center gap-4 p-6">
+          <img
+            src={withBase("/alex.jpg")}
+            alt="Alexander Reinbach"
+            className="h-16 w-16 rounded-full object-cover ring-2 ring-white/10"
+          />
+          <div>
+            <div className="text-base font-semibold text-slate-100">Alexander Reinbach</div>
+            <div className="mt-0.5 text-[13px] text-slate-400">BMW Group · Founder, SyncMode.io</div>
+          </div>
+        </div>
+        <div className="relative border-t border-dashed border-slate-700/80">
+          <span className="absolute -left-3 -top-3 h-6 w-6 rounded-full bg-slate-950" />
+          <span className="absolute -right-3 -top-3 h-6 w-6 rounded-full bg-slate-950" />
+        </div>
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-4 p-6">
+          {ticket.map((t) => (
+            <div key={t.label} className={t.label === "Own business" ? "col-span-2" : ""}>
+              <dt className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">{t.label}</dt>
+              <dd className="mt-1 text-[15px] font-semibold text-slate-100">{t.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
   );
 }
 
@@ -439,26 +433,19 @@ function LinkedinIcon({ className }: { className?: string }) {
   );
 }
 
-function Stat({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center gap-2">
-      <span className="text-2xl font-bold text-gradient-emerald tabular-nums normal-case tracking-normal">{value}</span>
-      <span>{label}</span>
-    </div>
-  );
-}
-
 function Section({
+  id,
   eyebrow,
   accentLine,
   children,
 }: {
+  id?: string;
   eyebrow: string;
   accentLine: string;
   children: ReactNode;
 }) {
   return (
-    <section className="relative px-6 py-24">
+    <section id={id} className="relative scroll-mt-8 px-6 py-20">
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -484,60 +471,6 @@ function SectionHeading({ children }: { children: ReactNode }) {
     >
       {children}
     </motion.h2>
-  );
-}
-
-function StoryCard({ story }: { story: Story }) {
-  const a = accentMap[story.accent];
-  return (
-    <div className="group relative h-full">
-      <div
-        className={`absolute -inset-px rounded-3xl bg-gradient-to-br ${a.ring} opacity-0 blur transition-opacity duration-500 group-hover:opacity-100`}
-      />
-      <div className="relative flex h-full flex-col overflow-hidden rounded-3xl glass-strong p-7">
-        <div className="flex items-start justify-between">
-          <div className={`inline-flex h-10 w-10 items-center justify-center rounded-xl ring-1 ${a.icon}`}>
-            {story.icon}
-          </div>
-          <span className="font-mono text-xs uppercase tracking-widest text-slate-500">{story.index}</span>
-        </div>
-        <h3 className="mt-6 text-xl font-bold leading-tight tracking-tight text-slate-100">{story.title}</h3>
-        <p className="mt-1 font-mono text-[12px] text-slate-400">{story.subtitle}</p>
-        <p className="mt-4 flex-1 text-[14px] leading-relaxed text-slate-400">{story.description}</p>
-        <p className="mt-5 border-t border-slate-800 pt-4 text-[14px] font-semibold text-emerald-200">
-          {story.result}
-        </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {story.tags.map((tag) => (
-            <span
-              key={tag}
-              className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-medium ring-1 ${a.chip}`}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function InfoCard({ icon, title, items }: { icon: ReactNode; title: string; items: string[] }) {
-  return (
-    <div className="h-full rounded-3xl glass-strong p-7">
-      <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-200 ring-1 ring-cyan-500/30">
-        {icon}
-      </div>
-      <h3 className="mt-5 text-lg font-bold text-slate-100">{title}</h3>
-      <ul className="mt-4 space-y-2.5">
-        {items.map((e) => (
-          <li key={e} className="flex gap-2.5 text-[14px] leading-relaxed text-slate-400">
-            <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-cyan-400" />
-            <span>{e}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
 

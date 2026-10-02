@@ -50,6 +50,7 @@ rsync -a --delete out/ deploy@159.69.39.142:~/projects/survey-system/portfolio-s
 - `Projects.tsx` — 3 Cards: BMW GenAI Agent, SyncMode.io, One platform eight markets
 - `Experience.tsx` — 8 Einträge nach canonical-facts (BMW-Titel "Vehicle Dynamics", SyncMode ab 02/2026, Thesis 10/2017–06/2018)
 - `WaymoLanding.tsx` + `app/waymo/` — unlisted Bewerbungsseite Strategy & BizOps Lead Germany (noindex, eigene OG-Tags)
+- `AnthropicLanding.tsx` + `app/anthropic/` — unlisted Bewerbungsseite Applied AI Architect, Industries (02.10.2026, noindex). Abschnitte: Customer Journey aus der JD (Discovery → Patterns) gegen BMW-Belege, 4 Anthropic-Werte mit je einem Beleg, SyncMode-Architektur, Karriere, Why Anthropic. Verlinkt im CV `CV_Reinbach_Anthropic_Architect.pdf`.
 - `AmbientBackground` / `ScrollProgress` nehmen `tone="calm"`; Quantum nutzt weiter den violetten Default
 - `Credentials.tsx` — 4 Top-Cards: Anthropic Claude Code, Google GenAI Leader, DeepLearning.AI, Stanford ML; Education (TUM/Beijing/Karlsruhe/Edinburgh); Tech Cloud
 - `Contact.tsx`

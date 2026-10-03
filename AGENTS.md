@@ -51,6 +51,8 @@ rsync -a --delete out/ deploy@159.69.39.142:~/projects/survey-system/portfolio-s
 - `Experience.tsx` — 8 Einträge nach canonical-facts (BMW-Titel "Vehicle Dynamics", SyncMode ab 02/2026, Thesis 10/2017–06/2018)
 - `WaymoLanding.tsx` + `app/waymo/` — unlisted Bewerbungsseite Strategy & BizOps Lead Germany (noindex, eigene OG-Tags)
 - `AnthropicLanding.tsx` + `app/anthropic/` — unlisted Bewerbungsseite Applied AI Architect, Industries (02.10.2026, noindex). Abschnitte: Customer Journey aus der JD (Discovery → Patterns) gegen BMW-Belege, 4 Anthropic-Werte mit je einem Beleg, SyncMode-Architektur, Karriere, Why Anthropic. Verlinkt im CV `CV_Reinbach_Anthropic_Architect.pdf`.
+- `NvidiaLanding.tsx` + `app/nvidia/` — unlisted Bewerbungsseite Senior Developer Relations Manager, Manufacturing (JR2016436, 02.10.2026, noindex). Gleiche Struktur wie Anthropic, Abschnitt 02 = vier Fertigungs-Stationen statt Werte. Verlinkt im CV `CV_Reinbach_NVIDIA_DevRel.pdf`. ⚠️ Live nur ohne Slash erreichbar (`/nvidia`), siehe Learning #67.
+- `NvidiaCspLanding.tsx` + `app/nvidia-csp/` — unlisted Bewerbungsseite Solutions Architect, CSP GTM (JR2025076, 02.10.2026, noindex). Kopie der DevRel-Seite mit SA-Schritten (PoC, Enterprise-Architektur, Evaluation, Produktion, Executives). Verlinkt im CV `CV_Reinbach_NVIDIA_CSP.pdf`. ⚠️ Stand 03.10.2026 nur lokal, nicht gepusht (Alex verfolgt DevRel).
 - `AmbientBackground` / `ScrollProgress` nehmen `tone="calm"`; Quantum nutzt weiter den violetten Default
 - `Credentials.tsx` — 4 Top-Cards: Anthropic Claude Code, Google GenAI Leader, DeepLearning.AI, Stanford ML; Education (TUM/Beijing/Karlsruhe/Edinburgh); Tech Cloud
 - `Contact.tsx`

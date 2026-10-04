@@ -43,7 +43,7 @@ const steps: Step[] = [
   {
     role: "Trusted advisor to the ecosystem",
     detail: "Work closely with developers, software vendors, start-ups, OEMs and system integrators.",
-    mine: "I steer the external vendors on our AI projects at BMW. In my tyre work I deal with all the major tyre manufacturers several times a week, from sourcing through development to start of production.",
+    mine: "I steer the external vendors on our AI projects at BMW. In vehicle dynamics I work with all the major tyre manufacturers several times a week, from sourcing through development to start of production.",
   },
   {
     role: "Onboarding and integration into production",
@@ -79,8 +79,8 @@ const cards: Card[] = [
   {
     icon: <Wrench className="h-5 w-5" />,
     value: "2023 to today",
-    title: "Tyre development",
-    mine: "We develop the tyres for the 7 Series, iX and XM. Each tyre is tailored to the car: handling, rolling resistance, steering and noise. We work with purchasing, the plant, sales and quality, and homologation is a regular part of the work.",
+    title: "Vehicle Dynamics",
+    mine: "My vehicle dynamics team works on the 7 Series, iX and XM. We tailor the tyres to each car: handling, rolling resistance, steering and noise. We work with purchasing, the plant, sales and quality, and homologation is a regular part of the work.",
   },
   {
     icon: <ShieldCheck className="h-5 w-5" />,
@@ -114,7 +114,7 @@ const values: { value: string; mine: string }[] = [
   },
   {
     value: "One team",
-    mine: "Tyre development only works across departments: purchasing, the plant, sales and quality. On the AI side I hand what works to BMW's central AI platform team, so other areas can reuse it.",
+    mine: "Vehicle dynamics only works across departments: purchasing, the plant, sales and quality. On the AI side I hand what works to BMW's central AI platform team, so other areas can reuse it.",
   },
   {
     value: "Excellence and determination",

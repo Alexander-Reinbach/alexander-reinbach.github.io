@@ -310,9 +310,9 @@ export function AnthropicLanding() {
                 ))}
               </ol>
               <p className="mt-6 border-t border-slate-800/80 pt-5 text-[13px] leading-relaxed text-slate-400">
-                Half of my current role is GenAI, half is leading a team of six engineers who
-                develop the tyres for the 7 Series, iX and XM. In that work I deal with all
-                the major tyre manufacturers several times a week.
+                Half of my current role is GenAI, half is leading a team of six vehicle dynamics
+                engineers for the 7 Series, iX and XM. In that work I deal with all the major
+                tyre manufacturers several times a week.
               </p>
             </motion.div>
             <motion.div variants={fadeInUp} className="rounded-3xl glass-strong p-7">

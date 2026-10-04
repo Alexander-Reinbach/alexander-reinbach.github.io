@@ -46,6 +46,11 @@ const steps: Step[] = [
     mine: "I ran discovery with our engineering and business teams and scoped the use case against the systems we actually have. Then I ran a proof of concept with success criteria: in a before-and-after comparison, five engineers found answers to complex questions about 70 % faster.",
   },
   {
+    role: "Business value",
+    detail: "Show decision makers what the solution is worth and win their support.",
+    mine: "I secured €0.8M for AI standardisation and defended programme budgets of around €5M at executive level. I present rollout, model choice and token spend up to the C-suite.",
+  },
+  {
     role: "Agents with tool access",
     detail: "Connect AI agents to the enterprise systems customers already run.",
     mine: "I designed an MCP server in TypeScript that gives an AI system function calling on our legacy engineering systems through their existing APIs. Its answers are grounded in real engineering data, and nothing is copied into a new platform.",
@@ -63,7 +68,7 @@ const steps: Step[] = [
   {
     role: "Production, handover and feedback",
     detail: "Hand over cleanly to delivery teams and feed field insight back to product.",
-    mine: "I rolled the solution out in stages; about 500 engineers use it every week. I documented it as a reference architecture for BMW's central AI platform team and present model choice and token spend to C-suite executives.",
+    mine: "I rolled the solution out in stages and changed it based on what engineers actually did with it. About 500 engineers use it every week. I documented it as a reference architecture for BMW's central AI platform team.",
   },
 ];
 
@@ -79,8 +84,8 @@ const cards: Card[] = [
   {
     icon: <Wrench className="h-5 w-5" />,
     value: "2023 to today",
-    title: "Tyre development",
-    mine: "We develop the tyres for the 7 Series, iX and XM. Each tyre is tailored to the car: handling, rolling resistance, steering and noise. We work with purchasing, the plant, sales and quality, and homologation is a regular part of the work.",
+    title: "Vehicle Dynamics",
+    mine: "My vehicle dynamics team works on the 7 Series, iX and XM. We tailor the tyres to each car: handling, rolling resistance, steering and noise. I work with all the major tyre manufacturers several times a week, from sourcing to start of production. Inside BMW we work with purchasing, the plant, sales and quality, and homologation is a regular part of the work.",
   },
   {
     icon: <ShieldCheck className="h-5 w-5" />,
@@ -185,8 +190,8 @@ export function GoogleLanding() {
               >
                 I&rsquo;m Alex. I have spent eight years inside BMW in Munich, and since 2023 I
                 have taken an AI solution for its engineers from discovery to production. I would
-                like to do this work for Google Cloud&rsquo;s enterprise customers, including
-                automotive manufacturers and suppliers.
+                like to do this work as a Customer Engineer for Google Cloud, with automotive
+                manufacturers, suppliers and other enterprise customers.
               </motion.p>
 
               <motion.div variants={fadeInUp} className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -216,7 +221,7 @@ export function GoogleLanding() {
         {/* JOURNEY */}
         <Section id="journey" eyebrow="01 · The role and my work" accentLine="from-cyan-500/40">
           <SectionHeading>
-            Five parts of the role,{" "}
+            Six parts of the role,{" "}
             <span className="text-gradient-emerald">and where I have done each one at BMW.</span>
           </SectionHeading>
           <motion.p variants={fadeInUp} className="-mt-2 mb-10 max-w-3xl text-[15px] leading-relaxed text-slate-400">
@@ -374,13 +379,13 @@ export function GoogleLanding() {
             <div className="absolute right-0 top-0 h-40 w-40 -translate-y-1/3 translate-x-1/3 rounded-full bg-emerald-500/10 blur-3xl" />
             <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-slate-300">
               <p>
-                At BMW I solved one enterprise&rsquo;s questions about AI agents: which data
+                At BMW I answered the questions one company has about AI agents: which data
                 they may access, how their actions are traced, what they cost and how fast they
                 answer.
               </p>
               <p>
-                As a Customer Engineer I want to help many customers answer the same questions,
-                with Gemini, which I already run in production.
+                As a Customer Engineer I want to help automotive manufacturers and suppliers in
+                DACH answer the same questions, with Gemini, which I already run in production.
               </p>
               <p className="text-slate-100">From Munich, in German and English.</p>
             </div>

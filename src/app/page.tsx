@@ -1,27 +1,7 @@
-import { AmbientBackground } from "@/components/AmbientBackground";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { Nav } from "@/components/Nav";
-import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Projects } from "@/components/Projects";
-import { Experience } from "@/components/Experience";
-import { Credentials } from "@/components/Credentials";
-import { Contact } from "@/components/Contact";
+import { Editorial } from "@/components/Editorial";
 
+// The previous dark homepage (Hero, About, Projects, Experience, Credentials, Contact)
+// is no longer mounted; the components stay for the unlisted application pages' history.
 export default function Home() {
-  return (
-    <>
-      <AmbientBackground tone="calm" />
-      <ScrollProgress tone="calm" />
-      <Nav />
-      <main className="relative">
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <Credentials />
-        <Contact />
-      </main>
-    </>
-  );
+  return <Editorial />;
 }

@@ -43,6 +43,8 @@ rsync -a --delete out/ deploy@159.69.39.142:~/projects/survey-system/portfolio-s
 
 ## Site-Struktur (`src/components/`)
 
+**Redesign Startseite 02.11.2026:** `page.tsx` rendert nur noch `Editorial.tsx` (+ `Editorial.module.css`, `MunichClock.tsx`). Editorialer Stil: Papierton, Tinte, eine Signalfarbe, Instrument Serif / Schibsted Grotesk / JetBrains Mono, jede Zahl mit Fußnote zur Methode, Dark Mode über `prefers-color-scheme`. Styles sind auf die Startseite begrenzt, die unlisted Seiten behalten ihr altes Design. Hero/About/Projects/Experience/Credentials/Contact sind nicht mehr gemountet. Inhalte gegen canonical-facts geprüft (raus: "develop the tyres", "nine legacy systems", "review", Apigee, Budgetzahlen).
+
 **Neutral-Umbau 29.09.2026:** Startseite passt jetzt für FDE- und BizOps-Bewerbungen (BMW + GenAI-Einführung + Gründer), Farbton "calm" (cyan/emerald statt violett). Alle Overclaims entfernt (600+ Daily Users, RAG, LangChain, Vector DBs, ERP/SCADA/PLC, Vertex AI, GCP, "by night I ship code"). Wahrheitsquelle: `../context/canonical-facts.md`.
 
 - `Hero.tsx` — full-screen mit Scroll-Dissolve, Counter-Stats (500 Weekly Users · 8 Märkte · 8 Jahre BMW), 1 CTA „Get in touch"

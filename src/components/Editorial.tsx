@@ -152,7 +152,7 @@ export function Editorial() {
           </div>
           <div className={s.figure}>
             <div className={s.figureNum}>~70 %<sup><a href="#n3" className={s.ref}>3</a></sup></div>
-            <p className={s.figureLabel}>less time to an answer on complex engineering questions</p>
+            <p className={s.figureLabel}>faster answers to complex engineering questions</p>
           </div>
         </section>
 
